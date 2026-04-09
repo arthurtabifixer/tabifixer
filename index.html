@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -556,22 +557,38 @@
     .testimonials-head { text-align: center; margin-bottom: 4rem; }
     .testimonials-head h2 { margin-top: 0.5rem; margin-bottom: 1rem; }
     .testimonials-head p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto; }
-    .testimonials-placeholder {
+    .testimonials-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem; margin-bottom: 2.5rem;
     }
-    .testimonial-card-empty {
-      background: var(--warm); padding: 2.5rem 2rem;
-      border: 1.5px dashed rgba(24,22,20,0.12);
+    .testimonial-card {
+      background: var(--warm); padding: 2.5rem 2rem 2rem;
+      border-top: 2px solid var(--red);
       display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center; min-height: 180px; gap: 0.75rem;
     }
-    .t-icon {
+    .t-quote {
       font-family: 'Instrument Serif', serif;
-      font-size: 2.5rem; color: rgba(184,35,24,0.2); line-height: 1;
+      font-size: 2rem; color: rgba(184,35,24,0.2);
+      line-height: 1; margin-bottom: 1.2rem;
     }
-    .testimonial-card-empty p { font-size: 14px; color: rgba(110,101,96,0.5); }
+    .t-text {
+      font-size: 16px; font-style: italic;
+      color: var(--muted); line-height: 1.85;
+      flex: 1; margin-bottom: 1.8rem;
+    }
+    .t-author { display: flex; align-items: center; gap: 0.85rem; }
+    .t-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--red); color: #fff;
+      font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; letter-spacing: 0.03em;
+    }
+    .t-name {
+      font-size: 15px; font-weight: 600; color: var(--ink);
+      line-height: 1.2;
+    }
+    .t-plan { font-size: 13px; color: var(--red); margin-top: 0.15rem; }
     .testimonials-note { text-align: center; font-size: 16px; color: var(--muted); }
     .testimonials-note a { color: var(--red); text-decoration: none; border-bottom: 1px solid rgba(184,35,24,0.3); }
 
@@ -740,7 +757,7 @@
       .plans { grid-template-columns: 1fr; }
       .plan.featured { order: -1; }
       .faq-layout { grid-template-columns: 1fr; gap: 3rem; }
-      .testimonials-placeholder { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 640px) {
       nav .nav-links { display: none; }
@@ -762,7 +779,7 @@
       .faq-item:hover { border-left: none; padding-left: 0; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
       .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
-      .testimonials-placeholder { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
       .addons-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -841,14 +858,13 @@
           <img class="img-front"
             src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&q=80&auto=format&fit=crop"
             alt="Tokyo alley" />
-          <div class="about-kanji">道</div>
         </div>
         <div class="about-text">
           <span class="label">About</span>
-          <h2>Born Between Two Worlds.</h2>
+          <h2>Born in Osaka. Raised in New York. Living in Japan.</h2>
           <div class="about-rule"></div>
-          <p>I'm Arthur — half American, half Japanese, fully bilingual. I grew up bouncing between the US and Japan, so I know what it's like to navigate both worlds. Now based in Osaka, I take my family to the kind of authentic spots you'd never find on Google — hole-in-the-wall izakayas, neighborhood festivals, local markets where no one speaks English.</p>
-          <p>When you book with me, I'm not just planning your trip. I'm slipping you into the same experiences I give my own family. No translation apps. No confusion. No settling for the tourist version. Just real Japan.</p>
+          <p>Growing up between two cultures means I understand what Western travelers expect — and exactly where Japan surprises them. I've spent years taking friends and family past the tourist crowds, into the neighborhoods where locals actually eat, drink, and live.</p>
+          <p>I'm not reading from a guidebook. I know which restaurants are worth calling ahead for, which trains to take, and which hidden spots will be the highlight of your trip.</p>
           <div class="about-tags">
             <span class="tag-chip">Bicultural &amp; Bilingual</span>
             <span class="tag-chip">Based in Osaka</span>
@@ -1062,25 +1078,44 @@
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="testimonials-head">
-        <span class="label">Testimonials</span>
-        <h2>What Travelers Are Saying</h2>
-        <p>TABI FIXER is just getting started. Be one of the first to experience authentic Japan with a bicultural guide.</p>
+        <span class="label">Real Trips, Real Fixes</span>
+        <h2>What clients say.</h2>
       </div>
-      <div class="testimonials-placeholder">
-        <div class="testimonial-card-empty">
-          <div class="t-icon">"</div>
-          <p>Verified review coming soon</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="t-quote">"</div>
+          <p class="t-text">I booked my rental car for the wrong day because of the time difference and had no way to fix it — no English support, no online option. He called the company and sorted everything out. I would've been a no-show and lost the booking entirely.</p>
+          <div class="t-author">
+            <div class="t-avatar">JO</div>
+            <div>
+              <div class="t-name">Johnathan 🇺🇸</div>
+              <div class="t-plan">Plus Plan</div>
+            </div>
+          </div>
         </div>
-        <div class="testimonial-card-empty">
-          <div class="t-icon">"</div>
-          <p>Verified review coming soon</p>
+        <div class="testimonial-card">
+          <div class="t-quote">"</div>
+          <p class="t-text">I didn't realize how much I was overpaying until he looked at my bookings. He found better hotels using local sites I would never have known about. The savings alone easily covered his fee.</p>
+          <div class="t-author">
+            <div class="t-avatar">EM</div>
+            <div>
+              <div class="t-name">Emma 🇺🇸</div>
+              <div class="t-plan">Basic Plan</div>
+            </div>
+          </div>
         </div>
-        <div class="testimonial-card-empty">
-          <div class="t-icon">"</div>
-          <p>Verified review coming soon</p>
+        <div class="testimonial-card">
+          <div class="t-quote">"</div>
+          <p class="t-text">Some of the best meals we had were at places that don't even take online reservations. He called and booked everything for us — no way we could've done that ourselves.</p>
+          <div class="t-author">
+            <div class="t-avatar">MA</div>
+            <div>
+              <div class="t-name">Marc 🇺🇸</div>
+              <div class="t-plan">VIP Plan</div>
+            </div>
+          </div>
         </div>
       </div>
-      <p class="testimonials-note">Verified reviews coming soon via <a href="#">TripAdvisor</a>.</p>
     </div>
   </section>
 
