@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tabi Fixer — Japan, Unlocked</title>
-  <meta name="description" content="Japan travel concierge by an American living in Osaka. I make phone calls to restaurants that don't take foreign bookings, handle reservations in Japanese, and provide real-time SOS support during your trip." />
-  <meta property="og:title" content="Tabi Fixer — Japan, Unlocked" />
-  <meta property="og:description" content="An American in Osaka who calls the restaurants you can't reach, books what Google can't find, and answers your phone when things go sideways in Japan." />
+  <title>Tabi Fixer — Your Bridge to the Real Japan</title>
+  <meta name="description" content="Half American, half Japanese, fully bilingual. I help travelers experience Japan the way locals do — restaurant bookings, concierge planning, and real-time support from Osaka." />
+  <meta property="og:title" content="Tabi Fixer — Your Bridge to the Real Japan" />
+  <meta property="og:description" content="Half American, half Japanese. I make the calls you can't, book the restaurants locals love, and fix problems in real time — from Osaka." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -22,93 +22,151 @@
       --gold:   #a8844e;
       --muted:  #6e6560;
       --border: rgba(24,22,20,0.09);
-      /* pricing: medium-dark warm espresso */
       --dark:   #4a3f38;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       background: var(--cream);
       color: var(--ink);
-      font-size: 15.5px;
+      font-size: 18px;
       line-height: 1.75;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     .container { max-width: 1160px; margin: 0 auto; padding: 0 2.5rem; }
 
+    /* ── TYPOGRAPHY ───────────────────────────── */
+    h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(28px, 3.5vw, 40px);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    h4 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 400;
+      line-height: 1.3;
+    }
+    .lead {
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    em { font-style: italic; color: var(--red); }
+
     .label {
-      font-size: 0.65rem;
-      font-weight: 500;
+      font-size: 12px;
+      font-weight: 600;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
+      display: block;
+      margin-bottom: 1rem;
     }
+
+    /* ── BUTTONS ──────────────────────────────── */
+    .btn-red {
+      display: inline-block;
+      padding: 1rem 2.4rem;
+      background: var(--red); color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px; font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-red:hover { background: #941c13; transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 1rem 2.4rem;
+      background: transparent; color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px; font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid rgba(24,22,20,0.25);
+      transition: border-color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--ink); }
+
+    .btn-link {
+      font-size: 16px; font-weight: 500;
+      color: var(--muted); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      border-bottom: 1px solid rgba(110,101,96,0.35); padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .btn-link:hover { color: var(--ink); border-color: var(--ink); }
 
     /* ── NAV ──────────────────────────────────── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       display: flex; align-items: center; justify-content: space-between;
       padding: 1.2rem 2.5rem;
-      background: rgba(247,242,235,0.88);
+      background: rgba(247,242,235,0.92);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
     .logo {
       font-family: 'Instrument Serif', serif;
-      font-size: 1.25rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink);
-      text-decoration: none;
+      font-size: 1.4rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--ink); text-decoration: none;
     }
     .logo b { color: var(--red); font-weight: 400; }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
     .nav-links a {
-      font-size: 0.7rem; font-weight: 400;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--muted); text-decoration: none;
-      transition: color 0.2s;
+      font-size: 14px; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--ink); }
     .nav-btn {
-      font-size: 0.7rem; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase;
+      font-size: 14px; font-weight: 600;
+      letter-spacing: 0.05em; text-transform: uppercase;
       color: #fff; background: var(--red);
-      text-decoration: none; padding: 0.6rem 1.5rem;
+      text-decoration: none; padding: 0.7rem 1.6rem;
       transition: background 0.2s;
     }
     .nav-btn:hover { background: #941c13; }
 
     /* ── HERO ─────────────────────────────────── */
-    /* Full-width two-column: big headline left, text+CTA right */
     .hero {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 0.9fr;
       align-items: center;
       padding-top: 68px;
       overflow: hidden;
       position: relative;
     }
-
-    /* Watermark kanji behind whole hero */
     .hero::after {
       content: '旅';
-      position: absolute;
-      right: -0.02em; bottom: -0.1em;
+      position: absolute; right: -0.02em; bottom: -0.1em;
       font-family: 'Instrument Serif', serif;
       font-size: clamp(20rem, 38vw, 44rem);
       line-height: 1;
-      color: rgba(184,35,24,0.08);
+      color: rgba(184,35,24,0.07);
       user-select: none; pointer-events: none;
     }
-
-    .hero-headline {
+    .hero-left {
       padding: 5rem 3rem 5rem 4.5rem;
       position: relative; z-index: 1;
     }
@@ -116,17 +174,10 @@
       display: flex; align-items: center; gap: 0.8rem;
       margin-bottom: 2rem;
     }
-    .hero-kicker-bar { width: 24px; height: 1px; background: var(--red); flex-shrink: 0; }
-
-    .hero h1 {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(3.4rem, 5.5vw, 6rem);
-      line-height: 1.03;
-      letter-spacing: -0.02em;
-    }
-    .hero h1 em { font-style: italic; color: var(--red); }
-
-    .hero-body {
+    .hero-kicker-bar { width: 28px; height: 1.5px; background: var(--red); flex-shrink: 0; }
+    .hero-left h1 { margin-bottom: 1.5rem; }
+    .hero-left h1 em { font-style: italic; color: var(--red); }
+    .hero-right {
       padding: 5rem 4.5rem 5rem 3rem;
       display: flex; flex-direction: column;
       justify-content: center;
@@ -134,274 +185,212 @@
       position: relative; z-index: 1;
     }
     .hero-desc {
-      font-size: 1rem;
-      color: var(--muted);
-      line-height: 1.85;
-      max-width: 380px;
-      margin-bottom: 0.5rem;
+      font-size: 20px; color: var(--muted);
+      line-height: 1.8; max-width: 420px; margin-bottom: 0.6rem;
     }
     .hero-origin {
-      font-size: 0.82rem; font-weight: 400;
-      margin-bottom: 2.5rem;
+      font-size: 15px; font-weight: 500;
+      color: var(--muted); margin-bottom: 2.5rem;
+      letter-spacing: 0.02em;
     }
     .hero-origin span { color: var(--red); }
-
-    .cta-group { display: flex; flex-direction: column; gap: 0.7rem; align-items: flex-start; }
-    .btn-red {
-      display: inline-block;
-      padding: 0.95rem 2.2rem;
-      background: var(--red); color: #fff;
-      font-size: 0.75rem; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
+    .hero-ctas { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; margin-bottom: 2.5rem; }
+    .trust-strip {
+      display: flex; align-items: center;
+      flex-wrap: wrap; gap: 0.4rem 1rem;
+      font-size: 14px; font-weight: 500; color: var(--muted);
     }
-    .btn-red:hover { background: #941c13; transform: translateY(-1px); }
-    .btn-link {
-      font-size: 0.78rem; font-weight: 400;
-      color: var(--muted); text-decoration: none;
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      border-bottom: 1px solid rgba(110,101,96,0.3); padding-bottom: 1px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .btn-link:hover { color: var(--ink); border-color: var(--ink); }
+    .trust-strip-sep { color: rgba(110,101,96,0.35); }
 
     /* ── TICKER ───────────────────────────────── */
     .ticker {
-      background: var(--ink); padding: 0.85rem 0;
+      background: var(--ink); padding: 0.9rem 0;
       overflow: hidden; white-space: nowrap;
     }
     .ticker-inner {
       display: inline-flex;
-      animation: scroll 26s linear infinite;
+      animation: scroll 28s linear infinite;
     }
     .ticker-inner span {
-      font-size: 0.62rem; font-weight: 400;
-      letter-spacing: 0.22em; text-transform: uppercase;
-      color: rgba(247,242,235,0.38); padding: 0 2.5rem;
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(247,242,235,0.35); padding: 0 2.5rem;
     }
     .ticker-inner .sep { color: var(--red); padding: 0; }
     @keyframes scroll { to { transform: translateX(-50%); } }
 
-    /* ── PROBLEM ──────────────────────────────── */
-    .problem { padding: 9rem 0 8rem; }
-    .problem-layout {
-      display: grid;
-      grid-template-columns: 5fr 7fr;
-      gap: 6rem; align-items: start;
-    }
-    .problem-lead h2 {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(2rem, 3.2vw, 3.2rem);
-      line-height: 1.15; letter-spacing: -0.01em;
-      margin-top: 1rem; margin-bottom: 1.5rem;
-    }
-    .problem-lead h2 em { font-style: italic; color: var(--red); }
-    .problem-lead p {
-      font-size: 0.9rem; color: var(--muted); line-height: 1.9;
-    }
-    .pain-list { border-top: 1px solid var(--border); }
-    .pain-item {
-      display: grid; grid-template-columns: 2.5rem 1fr;
-      gap: 1.2rem; align-items: start;
-      padding: 1.8rem 0; border-bottom: 1px solid var(--border);
-    }
-    .pain-num {
-      font-family: 'Instrument Serif', serif;
-      font-size: 0.9rem; font-style: italic;
-      color: var(--red); opacity: 0.6; padding-top: 0.1rem;
-    }
-    .pain-item h3 {
-      font-family: 'Instrument Serif', serif;
-      font-size: 1.1rem; font-weight: 400;
-      margin-bottom: 0.35rem; line-height: 1.3;
-    }
-    .pain-item p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
-
-    /* ── PRICING ──────────────────────────────── */
-    /* Warm charcoal instead of near-black */
-    .pricing {
-      background: var(--dark);
-      padding: 8rem 0;
-      color: var(--cream);
-    }
-    .pricing-head {
+    /* ── ABOUT ────────────────────────────────── */
+    .about { padding: 9rem 0; background: var(--warm); }
+    .about-layout {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 3rem; align-items: end;
-      margin-bottom: 4rem; padding-bottom: 3rem;
-      border-bottom: 1px solid rgba(247,242,235,0.09);
+      gap: 6rem; align-items: center;
     }
-    .pricing-head h2 {
+    .about-images { position: relative; }
+    .img-back {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      display: block;
+    }
+    .img-front {
+      position: absolute;
+      width: 55%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      bottom: -2rem;
+      right: -2rem;
+      border: 5px solid var(--cream);
+      box-shadow: 0 8px 32px rgba(24,22,20,0.12);
+    }
+    .about-kanji {
+      position: absolute; left: -0.1em; top: -0.05em;
       font-family: 'Instrument Serif', serif;
-      font-size: clamp(2rem, 3.2vw, 3.4rem);
-      line-height: 1.1; letter-spacing: -0.01em;
-      margin-top: 0.8rem;
+      font-size: 8rem; font-style: italic; line-height: 1;
+      color: rgba(184,35,24,0.06);
+      user-select: none; pointer-events: none;
     }
-    .pricing-head p {
-      font-size: 0.9rem; color: rgba(247,242,235,0.5);
-      line-height: 1.85; align-self: end;
+    .about-text { display: flex; flex-direction: column; }
+    .about-text h2 { margin-bottom: 1.2rem; margin-top: 0.5rem; }
+    .about-rule { width: 36px; height: 2px; background: var(--red); margin-bottom: 1.8rem; }
+    .about-text p {
+      font-size: 18px; color: var(--muted);
+      line-height: 1.9; margin-bottom: 1.2rem;
     }
-
-    /* Always 3 columns — even on smaller screens we just let them shrink */
-    .plans {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-    .plan {
-      background: rgba(247,242,235,0.04);
-      border: 1px solid rgba(247,242,235,0.09);
-      padding: 2.5rem 2rem 2rem;
-      display: flex; flex-direction: column;
-      position: relative;
-      transition: background 0.25s, border-color 0.25s;
-    }
-    .plan:hover {
-      background: rgba(247,242,235,0.07);
-      border-color: rgba(247,242,235,0.15);
-    }
-    .plan.featured {
-      background: rgba(184,35,24,0.12);
-      border: 1px solid rgba(184,35,24,0.5);
-    }
-    .plan-tag {
-      position: absolute; top: 0; left: 50%;
-      transform: translate(-50%, -50%);
-      background: var(--red); color: #fff;
-      font-size: 0.6rem; font-weight: 500;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      padding: 0.28rem 1rem; white-space: nowrap;
-    }
-    .plan-tier {
-      font-size: 0.63rem; font-weight: 500;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1.2rem;
-    }
-    .plan-price {
-      font-family: 'Instrument Serif', serif;
-      font-size: 3.5rem; line-height: 1;
-      color: var(--cream); margin-bottom: 0.2rem;
-    }
-    .plan-price sup { font-size: 1.3rem; vertical-align: 0.4em; margin-right: 2px; }
-    .plan-price small {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.75rem; font-weight: 300;
-      color: rgba(247,242,235,0.35); margin-left: 0.3rem;
-    }
-    .plan-for {
-      font-size: 0.72rem; font-weight: 400;
-      color: var(--gold); margin-bottom: 0.3rem;
-    }
-    .plan.featured .plan-for { color: rgba(220,150,130,0.95); }
-    .plan-pitch {
-      font-size: 0.8rem; font-style: italic;
-      color: rgba(247,242,235,0.4); line-height: 1.65;
-      margin-bottom: 1.6rem;
-    }
-    .plan-features { list-style: none; flex: 1; margin-bottom: 2rem; }
-    .plan-features li {
-      font-size: 0.82rem; font-weight: 300;
-      color: rgba(247,242,235,0.6);
-      padding: 0.5rem 0;
-      border-top: 1px solid rgba(247,242,235,0.06);
-      display: flex; gap: 0.7rem; align-items: baseline;
-      line-height: 1.5;
-    }
-    .plan-features li::before {
-      content: '';
-      width: 4px; height: 4px; min-width: 4px;
-      border-radius: 50%; background: var(--red); margin-top: 0.45em;
-    }
-    .plan-features li.feature-highlight {
-      color: rgba(247,242,235,0.92);
-      border-top: 1px solid rgba(184,35,24,0.3);
-      border-bottom: 1px solid rgba(184,35,24,0.3);
-      background: rgba(184,35,24,0.08);
-      padding-left: 0.6rem;
-      margin: 0.4rem 0;
-    }
-    .plan-features li.feature-highlight::before {
-      background: var(--gold);
-    }
-    .plan-btn {
-      display: block; padding: 0.8rem; text-align: center;
-      font-size: 0.7rem; font-weight: 500;
+    .about-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0 2.5rem; }
+    .tag-chip {
+      font-size: 12px; font-weight: 600;
       letter-spacing: 0.1em; text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid rgba(247,242,235,0.18);
-      color: rgba(247,242,235,0.7);
-      transition: all 0.2s;
+      color: var(--red); border: 1.5px solid rgba(184,35,24,0.25);
+      padding: 0.4rem 1rem;
     }
-    .plan-btn:hover, .plan.featured .plan-btn {
-      background: var(--red); border-color: var(--red); color: #fff;
-    }
-    .addons { text-align: center; padding-top: 2.5rem; border-top: 1px solid rgba(247,242,235,0.07); }
-    .addons-label {
-      font-size: 0.63rem; font-weight: 500;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1.2rem;
-    }
-    .addons-row { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .addon {
-      border: 1px solid rgba(184,35,24,0.3);
-      padding: 0.6rem 1.4rem;
-      display: flex; flex-direction: column; align-items: center;
-    }
-    .addon-name { font-size: 0.8rem; font-weight: 400; color: var(--cream); }
-    .addon-price { font-size: 0.68rem; color: rgba(184,35,24,0.75); margin-top: 0.1rem; }
 
-    /* ── HOW ──────────────────────────────────── */
-    .how { padding: 9rem 0; background: var(--warm); }
-    .how-head {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-    .how-head h2 {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(2rem, 3.2vw, 3.2rem);
-      line-height: 1.15; letter-spacing: -0.01em; margin-top: 0.8rem;
-    }
-    .how-head p { font-size: 0.9rem; color: var(--muted); line-height: 1.85; max-width: 480px; margin: 0.8rem auto 0; }
-
-    .steps-flow {
-      display: grid;
-      grid-template-columns: 1fr 3rem 1fr 3rem 1fr;
-      align-items: center;
-      gap: 0;
-    }
-    .step-card {
-      background: var(--cream);
-      padding: 2.8rem 2.2rem;
+    /* ── PROBLEM ──────────────────────────────── */
+    .problem {
+      padding: 9rem 0;
+      background: var(--ink);
+      color: var(--cream);
       position: relative;
       overflow: hidden;
+    }
+    .problem::after {
+      content: '？';
+      position: absolute; right: -0.05em; bottom: -0.1em;
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(16rem, 30vw, 36rem); line-height: 1;
+      color: rgba(247,242,235,0.03);
+      user-select: none; pointer-events: none;
+    }
+    .problem-inner { position: relative; z-index: 1; max-width: 820px; }
+    .problem .label { color: var(--gold); }
+    .problem h2 { color: var(--cream); margin-top: 0.5rem; margin-bottom: 1.5rem; }
+    .problem-intro {
+      font-size: 20px; color: rgba(247,242,235,0.65);
+      line-height: 1.8; margin-bottom: 2.5rem; max-width: 640px;
+    }
+    .pain-list { list-style: none; margin-bottom: 3rem; }
+    .pain-list li {
+      font-size: 18px;
+      color: rgba(247,242,235,0.82);
+      padding: 1rem 0;
+      border-top: 1px solid rgba(247,242,235,0.08);
+      display: flex; align-items: baseline; gap: 1rem;
+      line-height: 1.6;
+    }
+    .pain-list li:last-child { border-bottom: 1px solid rgba(247,242,235,0.08); }
+    .pain-dash {
+      color: var(--red); font-weight: 700;
+      font-size: 1.2rem; flex-shrink: 0; line-height: 1;
+    }
+    .problem-resolve {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(22px, 3vw, 30px);
+      color: var(--cream); line-height: 1.4;
+      margin-top: 3rem;
+    }
+    .problem-resolve em { color: rgba(220,150,140,1); font-style: italic; }
+
+    /* ── SOLUTION ─────────────────────────────── */
+    .solution { padding: 9rem 0; background: var(--cream); }
+    .solution-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 6rem; align-items: center;
+    }
+    .solution-text .label { margin-bottom: 0.8rem; }
+    .solution-text h2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+    .solution-subhead {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-weight: 400; font-style: italic;
+      color: var(--red); margin-bottom: 2rem;
+    }
+    .solution-text p {
+      font-size: 18px; color: var(--muted);
+      line-height: 1.9; margin-bottom: 1.5rem;
+    }
+    .check-list { list-style: none; margin-bottom: 2rem; }
+    .check-list li {
+      font-size: 18px; color: var(--ink);
+      padding: 0.8rem 0;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: baseline; gap: 1rem;
+      line-height: 1.6;
+    }
+    .check-list li:last-child { border-bottom: 1px solid var(--border); }
+    .check-mark { color: var(--red); font-size: 1rem; font-weight: 700; flex-shrink: 0; }
+    .solution-card {
+      background: var(--warm);
+      padding: 3rem 2.5rem;
       border-bottom: 3px solid var(--red);
-      height: 100%;
+      position: relative; overflow: hidden;
+    }
+    .solution-card-kanji {
+      position: absolute; right: -0.08em; bottom: -0.1em;
+      font-family: 'Instrument Serif', serif;
+      font-size: 10rem; line-height: 1;
+      color: rgba(184,35,24,0.06);
+      user-select: none; pointer-events: none;
+    }
+    .solution-card p {
+      font-size: 18px; color: var(--muted);
+      line-height: 1.9; position: relative;
+    }
+    .solution-card p + p { margin-top: 1rem; }
+
+    /* ── HOW IT WORKS ─────────────────────────── */
+    .how { padding: 9rem 0; background: var(--warm); }
+    .how-head { text-align: center; margin-bottom: 5rem; }
+    .how-head h2 { margin-top: 0.5rem; margin-bottom: 1rem; }
+    .how-head .lead { max-width: 560px; margin: 0 auto; }
+    .steps-flow {
+      display: grid;
+      grid-template-columns: 1fr 2.5rem 1fr 2.5rem 1fr 2.5rem 1fr;
+      align-items: center; gap: 0;
+    }
+    .step-card {
+      background: var(--cream); padding: 2.8rem 2.2rem;
+      position: relative; overflow: hidden;
+      border-bottom: 3px solid var(--red); height: 100%;
     }
     .step-card-kanji {
-      position: absolute;
-      right: -0.08em; bottom: -0.08em;
+      position: absolute; right: -0.08em; bottom: -0.08em;
       font-family: 'Instrument Serif', serif;
-      font-size: 8rem; font-style: italic;
-      line-height: 1;
+      font-size: 8rem; font-style: italic; line-height: 1;
       color: rgba(184,35,24,0.07);
       user-select: none; pointer-events: none;
     }
     .step-counter {
-      font-size: 0.62rem; font-weight: 500;
+      font-size: 12px; font-weight: 600;
       letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1.2rem;
-      display: block;
+      color: var(--gold); margin-bottom: 1.2rem; display: block;
     }
     .step-card h4 {
       font-family: 'Instrument Serif', serif;
-      font-size: 1.35rem; font-weight: 400;
-      line-height: 1.2; margin-bottom: 0.8rem;
-      position: relative;
+      font-size: 22px; font-weight: 400;
+      line-height: 1.25; margin-bottom: 0.9rem; position: relative;
     }
     .step-card p {
-      font-size: 0.85rem; color: var(--muted);
-      line-height: 1.85; position: relative;
+      font-size: 16px; color: var(--muted);
+      line-height: 1.8; position: relative;
     }
     .step-arrow {
       display: flex; align-items: center; justify-content: center;
@@ -409,98 +398,202 @@
     }
     .step-arrow svg { width: 28px; height: 28px; }
 
-    /* ── ABOUT ────────────────────────────────── */
-    .about { background: var(--warm); padding: 9rem 0; }
-    .about-layout {
+    /* ── PRICING ──────────────────────────────── */
+    .pricing { background: var(--dark); padding: 9rem 0; color: var(--cream); }
+    .pricing-head {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 6rem; align-items: center;
+      gap: 3rem; align-items: end;
+      margin-bottom: 2.5rem; padding-bottom: 3.5rem;
+      border-bottom: 1px solid rgba(247,242,235,0.1);
     }
-    .about-images { position: relative; height: 560px; }
-    .about-images img { position: absolute; object-fit: cover; }
-    .img-back { width: 78%; height: 76%; right: 0; bottom: 0; filter: saturate(0.78); }
-    .img-front {
-      width: 54%; height: 48%; left: 0; top: 0;
-      border: 5px solid var(--warm); filter: saturate(0.78); z-index: 2;
+    .pricing-head .label { color: var(--gold); }
+    .pricing-head h2 { margin-top: 0.6rem; }
+    .pricing-head p { font-size: 18px; color: rgba(247,242,235,0.72); line-height: 1.75; align-self: end; }
+
+    /* Terms checkbox */
+    .terms-check-row {
+      margin-bottom: 2.5rem;
+      display: flex; flex-direction: column; gap: 0.5rem;
     }
-    .about-kanji {
-      position: absolute; right: 0; bottom: 1rem;
-      font-family: 'Instrument Serif', serif;
-      font-size: 8rem; line-height: 1;
-      color: var(--red); opacity: 0.07; user-select: none;
+    .terms-check-label {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 15px; color: rgba(247,242,235,0.7);
+      cursor: pointer; line-height: 1.5;
     }
-    .about-text .label { display: block; margin-bottom: 0.8rem; }
-    .about-text h2 {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(2rem, 3vw, 3rem);
-      line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 1.5rem;
+    .terms-check-label input[type="checkbox"] {
+      width: 18px; height: 18px; flex-shrink: 0;
+      accent-color: var(--red); cursor: pointer;
     }
-    .about-rule { width: 32px; height: 1px; background: var(--red); margin-bottom: 1.5rem; }
-    .about-text p { font-size: 0.9rem; color: var(--muted); line-height: 1.9; margin-bottom: 1rem; }
-    .about-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0 2rem; }
-    .tag-chip {
-      font-size: 0.65rem; font-weight: 500;
+    .terms-check-label a { color: rgba(220,160,150,1); text-decoration: underline; }
+    .terms-check-label a:hover { color: var(--cream); }
+    .terms-check-hint {
+      font-size: 13px; color: rgba(220,100,80,1);
+      padding-left: 1.75rem; display: none;
+    }
+    .terms-check-hint.visible { display: block; }
+
+    .plans {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-bottom: 3.5rem;
+    }
+    .plan {
+      background: rgba(247,242,235,0.05);
+      border: 1px solid rgba(247,242,235,0.12);
+      padding: 2.5rem 2rem 2rem;
+      display: flex; flex-direction: column;
+      position: relative;
+      transition: background 0.25s, border-color 0.25s;
+    }
+    .plan:hover { background: rgba(247,242,235,0.08); border-color: rgba(247,242,235,0.2); }
+    .plan.featured { background: rgba(184,35,24,0.15); border: 1px solid rgba(184,35,24,0.5); }
+    .plan-tag {
+      position: absolute; top: 0; left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--red); color: #fff;
+      font-size: 12px; font-weight: 600;
       letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--red); border: 1px solid rgba(184,35,24,0.25);
-      padding: 0.3rem 0.8rem;
+      padding: 0.3rem 1.1rem; white-space: nowrap;
+    }
+    .plan-tier {
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .plan-price {
+      font-family: 'Instrument Serif', serif;
+      font-size: 3.8rem; line-height: 1;
+      color: var(--cream); margin-bottom: 0.25rem;
+    }
+    .plan-price sup { font-size: 1.5rem; vertical-align: 0.4em; margin-right: 2px; }
+    .plan-price small {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px; font-weight: 400;
+      color: rgba(247,242,235,0.55); margin-left: 0.3rem;
+    }
+    .plan-for { font-size: 14px; font-weight: 500; color: var(--gold); margin-bottom: 0.4rem; }
+    .plan.featured .plan-for { color: rgba(240,180,160,1); }
+    .plan-pitch {
+      font-size: 15px; font-style: italic;
+      color: rgba(247,242,235,0.62); line-height: 1.65; margin-bottom: 1.8rem;
+    }
+    .plan-features { list-style: none; flex: 1; margin-bottom: 2rem; }
+    .plan-features li {
+      font-size: 15px; font-weight: 400;
+      color: rgba(247,242,235,0.88);
+      padding: 0.6rem 0;
+      border-top: 1px solid rgba(247,242,235,0.08);
+      display: flex; gap: 0.75rem; align-items: baseline; line-height: 1.5;
+    }
+    .plan-features li::before {
+      content: ''; width: 4px; height: 4px; min-width: 4px;
+      border-radius: 50%; background: var(--red); margin-top: 0.5em;
+    }
+    .plan-features li.feature-highlight {
+      color: #fff;
+      border-top: 1px solid rgba(184,35,24,0.4);
+      border-bottom: 1px solid rgba(184,35,24,0.4);
+      background: rgba(184,35,24,0.1);
+      padding-left: 0.6rem; margin: 0.4rem 0;
+    }
+    .plan-features li.feature-highlight::before { background: var(--gold); }
+    .plan-btn {
+      display: block; padding: 1rem; text-align: center;
+      font-size: 15px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid rgba(247,242,235,0.25);
+      color: rgba(247,242,235,0.85);
+      transition: all 0.2s; cursor: pointer;
+    }
+    .plan-btn:hover, .plan.featured .plan-btn { background: var(--red); border-color: var(--red); color: #fff; }
+    .plan-hotline {
+      display: flex; align-items: center; gap: 0.6rem;
+      background: rgba(184,35,24,0.14);
+      border: 1px solid rgba(184,35,24,0.35);
+      border-left: 3px solid var(--red);
+      padding: 0.65rem 0.9rem; margin: 0.6rem 0 1.5rem;
+      font-size: 14px; color: rgba(247,242,235,0.92); line-height: 1.45;
+    }
+    .plan-hotline svg { flex-shrink: 0; color: var(--red); }
+    .terms-note {
+      text-align: center; margin-top: 2.5rem; padding-top: 2rem;
+      border-top: 1px solid rgba(247,242,235,0.06);
+      font-size: 13px; color: rgba(247,242,235,0.35);
+    }
+    .terms-note a { color: rgba(247,242,235,0.55); text-decoration: underline; transition: color 0.2s; }
+    .terms-note a:hover { color: var(--cream); }
+
+    /* ── ADD-ONS ──────────────────────────────── */
+    .addons-section { padding: 7rem 0; background: var(--warm); }
+    .addons-section .label { margin-bottom: 0.5rem; }
+    .addons-section h2 { margin-bottom: 1rem; }
+    .addons-section .lead { max-width: 500px; margin-bottom: 3.5rem; }
+    .addons-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .addon-card {
+      background: var(--cream); padding: 2rem 1.8rem;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .addon-card:hover { border-color: var(--red); }
+    .addon-card-name {
+      font-size: 17px; font-weight: 600;
+      color: var(--ink); margin-bottom: 0.4rem; line-height: 1.35;
+    }
+    .addon-card-price {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.9rem; color: var(--red);
+      line-height: 1; margin-bottom: 0.75rem;
+    }
+    .addon-card-desc {
+      font-size: 15px; color: var(--muted); line-height: 1.75;
     }
 
-    /* ── REVIEWS ──────────────────────────────── */
-    .reviews { padding: 9rem 0; }
-    .reviews-head { margin-bottom: 4rem; }
-    .reviews-head h2 {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(2rem, 3.2vw, 3.2rem);
-      line-height: 1.1; letter-spacing: -0.01em; margin-top: 0.8rem;
+    /* ── TESTIMONIALS ─────────────────────────── */
+    .testimonials { padding: 9rem 0; background: var(--cream); }
+    .testimonials-head { text-align: center; margin-bottom: 4rem; }
+    .testimonials-head h2 { margin-top: 0.5rem; margin-bottom: 1rem; }
+    .testimonials-head p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto; }
+    .testimonials-placeholder {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-bottom: 2.5rem;
     }
-    .reviews-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
-    }
-    .review {
-      padding: 2.2rem 2rem; background: var(--warm);
-      border-top: 2px solid var(--red);
+    .testimonial-card-empty {
+      background: var(--warm); padding: 2.5rem 2rem;
+      border: 1.5px dashed rgba(24,22,20,0.12);
       display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; min-height: 180px; gap: 0.75rem;
     }
-    .review-mark {
+    .t-icon {
       font-family: 'Instrument Serif', serif;
-      font-size: 3.5rem; font-style: italic;
-      color: var(--red); opacity: 0.2; line-height: 1; margin-bottom: 0.2rem;
+      font-size: 2.5rem; color: rgba(184,35,24,0.2); line-height: 1;
     }
-    .review p {
-      font-size: 0.88rem; font-style: italic;
-      color: var(--muted); line-height: 1.85; flex: 1; margin-bottom: 1.5rem;
-    }
-    .review-author { display: flex; align-items: center; gap: 0.8rem; }
-    .review-av {
-      width: 32px; height: 32px; border-radius: 50%;
-      background: var(--red); display: flex; align-items: center;
-      justify-content: center; font-size: 0.62rem; font-weight: 500;
-      color: #fff; flex-shrink: 0;
-    }
-    .review-name { font-size: 0.8rem; font-weight: 500; }
-    .review-plan { font-size: 0.65rem; font-weight: 400; letter-spacing: 0.06em; color: var(--red); }
+    .testimonial-card-empty p { font-size: 14px; color: rgba(110,101,96,0.5); }
+    .testimonials-note { text-align: center; font-size: 16px; color: var(--muted); }
+    .testimonials-note a { color: var(--red); text-decoration: none; border-bottom: 1px solid rgba(184,35,24,0.3); }
 
     /* ── FAQ ──────────────────────────────────── */
     .faq { padding: 9rem 0; background: var(--warm); }
-    .faq-layout {
-      display: grid; grid-template-columns: 1fr 2fr;
-      gap: 6rem; align-items: start;
-    }
-    .faq-side h2 {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(2rem, 3vw, 3rem);
-      line-height: 1.15; letter-spacing: -0.01em; margin-top: 0.8rem;
-    }
-    .faq-side p { font-size: 0.85rem; color: var(--muted); line-height: 1.85; margin-top: 1rem; }
+    .faq-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; align-items: start; }
+    .faq-side h2 { margin-top: 0.5rem; margin-bottom: 1rem; }
+    .faq-side p { font-size: 18px; color: var(--muted); line-height: 1.75; }
+    .faq-side .btn-red { margin-top: 2rem; font-size: 15px; padding: 0.85rem 1.8rem; }
     .faq-list { border-top: 1px solid var(--border); }
-    .faq-item { border-bottom: 1px solid var(--border); padding: 1.4rem 0; }
-    .faq-q { font-size: 0.93rem; font-weight: 400; color: var(--ink); margin-bottom: 0.5rem; }
-    .faq-a { font-size: 0.85rem; font-weight: 300; color: var(--muted); line-height: 1.85; }
+    .faq-item {
+      border-bottom: 1px solid var(--border); padding: 1.6rem 0;
+      border-left: 2px solid transparent;
+      transition: border-color 0.2s, padding-left 0.2s;
+    }
+    .faq-item:hover { border-left-color: var(--red); padding-left: 0.9rem; }
+    .faq-q { font-size: 18px; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; line-height: 1.4; }
+    .faq-a { font-size: 16px; color: var(--muted); line-height: 1.85; }
+    .faq-a a { color: var(--red); text-decoration: none; border-bottom: 1px solid rgba(184,35,24,0.3); }
 
     /* ── CTA ──────────────────────────────────── */
-    .cta {
-      padding: 10rem 0; text-align: center;
-      position: relative; overflow: hidden;
-    }
+    .cta { padding: 10rem 0; text-align: center; position: relative; overflow: hidden; }
     .cta::before {
       content: '案内';
       position: absolute; top: 50%; left: 50%;
@@ -511,61 +604,49 @@
       user-select: none; white-space: nowrap; pointer-events: none;
     }
     .cta .label { display: block; margin-bottom: 0.8rem; }
-    .cta h2 {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(2.2rem, 4vw, 4.5rem);
-      line-height: 1.1; letter-spacing: -0.015em;
-      max-width: 680px; margin: 0 auto 1.2rem; position: relative;
-    }
-    .cta h2 em { font-style: italic; color: var(--red); }
-    .cta-rule { width: 32px; height: 1px; background: var(--red); margin: 0 auto 1.5rem; }
-    .cta p {
-      font-size: 0.9rem; color: var(--muted); max-width: 420px;
-      margin: 0 auto 2.5rem; line-height: 1.85; position: relative;
-    }
-    .cta-foot { font-size: 0.72rem; color: var(--muted); margin-top: 0.7rem; position: relative; }
+    .cta h2 { max-width: 700px; margin: 0 auto 1.2rem; position: relative; }
+    .cta-rule { width: 36px; height: 2px; background: var(--red); margin: 0 auto 1.8rem; }
+    .cta p { font-size: 20px; color: var(--muted); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.8; position: relative; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
+    .cta-note { font-size: 14px; color: var(--muted); margin-top: 1.2rem; position: relative; }
 
     /* ── FOOTER ───────────────────────────────── */
-    footer { background: var(--ink); color: rgba(247,242,235,0.45); padding: 3.5rem 0 2rem; }
-    .footer-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr;
-      gap: 4rem; margin-bottom: 3rem;
-    }
+    footer { background: var(--ink); color: rgba(247,242,235,0.45); padding: 4rem 0 2.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     .footer-logo {
-      font-family: 'Instrument Serif', serif; font-size: 1.2rem;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--cream); text-decoration: none; display: block; margin-bottom: 0.9rem;
+      font-family: 'Instrument Serif', serif; font-size: 1.3rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--cream); text-decoration: none;
+      display: block; margin-bottom: 0.9rem;
     }
     .footer-logo b { color: var(--red); font-weight: 400; }
-    .footer-about p { font-size: 0.82rem; line-height: 1.8; color: rgba(247,242,235,0.35); max-width: 260px; }
+    .footer-about p { font-size: 15px; line-height: 1.8; color: rgba(247,242,235,0.35); max-width: 240px; }
     .footer-col h4 {
-      font-size: 0.62rem; font-weight: 500;
+      font-size: 12px; font-weight: 600;
       letter-spacing: 0.2em; text-transform: uppercase;
       color: var(--gold); margin-bottom: 1.2rem;
     }
     .footer-col ul { list-style: none; }
-    .footer-col li { margin-bottom: 0.6rem; }
-    .footer-col a { font-size: 0.82rem; font-weight: 300; color: rgba(247,242,235,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-col li { margin-bottom: 0.7rem; }
+    .footer-col a { font-size: 14px; color: rgba(247,242,235,0.4); text-decoration: none; transition: color 0.2s; }
     .footer-col a:hover { color: var(--cream); }
     .footer-bottom {
-      border-top: 1px solid rgba(247,242,235,0.06);
+      border-top: 1px solid rgba(247,242,235,0.07);
       padding-top: 1.5rem; display: flex;
       justify-content: space-between; align-items: center;
-      font-size: 0.7rem; color: rgba(247,242,235,0.2);
+      font-size: 13px; color: rgba(247,242,235,0.2);
+      flex-wrap: wrap; gap: 0.5rem;
     }
-    .footer-jp {
-      font-family: 'Instrument Serif', serif; font-size: 1rem;
-      font-style: italic; letter-spacing: 0.3em; color: rgba(168,132,78,0.3);
-    }
+    .footer-jp { font-family: 'Instrument Serif', serif; font-size: 1rem; font-style: italic; letter-spacing: 0.3em; color: rgba(168,132,78,0.3); }
 
     /* ── FLOAT BTN ────────────────────────────── */
     .float-btn {
       position: fixed; bottom: 2rem; right: 2rem; z-index: 300;
       display: flex; align-items: center; gap: 0.5rem;
       background: var(--ink); color: var(--cream);
-      text-decoration: none; padding: 0.75rem 1.25rem;
-      font-size: 0.72rem; font-weight: 500;
-      letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none; padding: 0.85rem 1.5rem;
+      font-size: 14px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
       box-shadow: 0 8px 32px rgba(24,22,20,0.22);
       transform: translateY(6rem); opacity: 0;
       transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.4s, background 0.2s;
@@ -585,18 +666,18 @@
     .sticky-bar.visible { transform: translateY(0); }
     .sticky-bar-inner { display: flex; align-items: center; gap: 2.5rem; flex: 1; }
     .sticky-bar-text { display: flex; flex-direction: column; gap: 0.15rem; }
-    .sticky-bar-label { font-size: 0.88rem; font-weight: 400; color: var(--cream); }
-    .sticky-bar-sub { font-size: 0.68rem; font-weight: 300; letter-spacing: 0.04em; color: rgba(247,242,235,0.4); }
+    .sticky-bar-label { font-size: 16px; font-weight: 500; color: var(--cream); }
+    .sticky-bar-sub { font-size: 13px; color: rgba(247,242,235,0.42); }
     .sticky-bar-btn {
       white-space: nowrap; display: inline-block;
-      padding: 0.7rem 1.6rem; background: var(--red); color: #fff;
-      text-decoration: none; font-size: 0.72rem; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s;
+      padding: 0.75rem 1.8rem; background: var(--red); color: #fff;
+      text-decoration: none; font-size: 14px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase; transition: background 0.2s;
     }
     .sticky-bar-btn:hover { background: #941c13; }
     .sticky-bar-close {
       background: none; border: none; cursor: pointer;
-      color: rgba(247,242,235,0.35); font-size: 1.4rem;
+      color: rgba(247,242,235,0.35); font-size: 1.5rem;
       line-height: 1; padding: 0.2rem; transition: color 0.2s; flex-shrink: 0;
     }
     .sticky-bar-close:hover { color: var(--cream); }
@@ -610,7 +691,7 @@
     }
     .popup-overlay.visible { opacity: 1; pointer-events: all; }
     .popup {
-      background: var(--cream); max-width: 480px; width: 100%;
+      background: var(--cream); max-width: 500px; width: 100%;
       padding: 3rem 2.8rem; position: relative; overflow: hidden;
       transform: translateY(20px) scale(0.97);
       transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
@@ -628,95 +709,61 @@
       font-size: 1.5rem; line-height: 1; color: var(--muted); transition: color 0.2s;
     }
     .popup-close:hover { color: var(--ink); }
-    .popup-label { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; position: relative; }
-    .popup-title {
-      font-family: 'Instrument Serif', serif; font-size: 2.2rem;
-      line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 1.2rem; position: relative;
-    }
+    .popup-label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; position: relative; }
+    .popup-title { font-family: 'Instrument Serif', serif; font-size: 2.2rem; line-height: 1.1; margin-bottom: 1.2rem; position: relative; }
     .popup-title em { font-style: italic; color: var(--red); }
-    .popup-desc {
-      font-size: 0.88rem; font-weight: 300; color: var(--muted);
-      line-height: 1.85; margin-bottom: 1.8rem; position: relative;
-    }
+    .popup-desc { font-size: 17px; color: var(--muted); line-height: 1.8; margin-bottom: 1.8rem; position: relative; }
     .popup-btn {
-      display: block; padding: 0.95rem; background: var(--red); color: #fff;
-      text-align: center; text-decoration: none; font-size: 0.75rem;
-      font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      display: block; padding: 1rem; background: var(--red); color: #fff;
+      text-align: center; text-decoration: none; font-size: 16px;
+      font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
       transition: background 0.2s; position: relative; margin-bottom: 0.8rem;
     }
     .popup-btn:hover { background: #941c13; }
-    .popup-note { font-size: 0.7rem; font-weight: 300; color: var(--muted); text-align: center; position: relative; }
-
-    /* ── FAQ HOVER ACCENT ─────────────────────── */
-    .faq-item {
-      border-left: 2px solid transparent;
-      padding-left: 0;
-      transition: border-color 0.2s, padding-left 0.2s;
-    }
-    .faq-item:hover {
-      border-left-color: var(--red);
-      padding-left: 0.75rem;
-    }
-
-    /* ── VIP HOTLINE CALLOUT ───────────────────── */
-    .plan-hotline {
-      display: flex; align-items: center; gap: 0.55rem;
-      background: rgba(184,35,24,0.14);
-      border: 1px solid rgba(184,35,24,0.32);
-      border-left: 3px solid var(--red);
-      padding: 0.55rem 0.85rem;
-      margin: 0.6rem 0 1.3rem;
-      font-size: 0.77rem; font-weight: 400;
-      color: rgba(247,242,235,0.9);
-      line-height: 1.4;
-    }
-    .plan-hotline svg { flex-shrink: 0; color: var(--red); }
-
-    /* ── SOCIAL PROOF BAR ─────────────────────── */
-    .trust-bar {
-      display: flex; align-items: center; justify-content: center;
-      flex-wrap: wrap; gap: 0.4rem 1.5rem;
-      margin-top: 3rem; padding-top: 2.5rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.72rem; font-weight: 400;
-      letter-spacing: 0.07em; color: var(--muted);
-      text-transform: uppercase;
-    }
-    .trust-sep { color: var(--red); opacity: 0.4; }
+    .popup-note { font-size: 13px; color: var(--muted); text-align: center; position: relative; }
 
     /* ── RESPONSIVE ───────────────────────────── */
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .addons-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 960px) {
       .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 80px; }
-      .hero-body { border-left: none; padding: 2.5rem 2rem; }
-      .hero-headline { padding: 3.5rem 2rem 1rem; }
+      .hero-left { padding: 4rem 2rem 1.5rem; }
+      .hero-right { border-left: none; border-top: 1px solid var(--border); padding: 2.5rem 2rem 4rem; }
       .hero::after { display: none; }
+      .about-layout, .solution-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .img-front { display: none; }
+      .steps-flow { grid-template-columns: 1fr; }
+      .step-arrow { display: none; }
       .pricing-head { grid-template-columns: 1fr; }
       .plans { grid-template-columns: 1fr; }
       .plan.featured { order: -1; }
-      .steps-flow { grid-template-columns: 1fr; }
-      .step-arrow { display: none; }
-      .about-layout { grid-template-columns: 1fr; }
-      .about-images { height: 300px; }
-      .reviews-grid { grid-template-columns: 1fr; }
-      .faq-layout { grid-template-columns: 1fr; gap: 2rem; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .problem-layout { grid-template-columns: 1fr; }
+      .faq-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .testimonials-placeholder { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       nav .nav-links { display: none; }
       nav { padding: 1rem 1.5rem; }
-      .hero h1 { font-size: 2.8rem; }
-      .hero-headline { padding: 2.5rem 1.5rem 1rem; }
-      .hero-body { padding: 1.5rem 1.5rem 3rem; }
       .container { padding: 0 1.5rem; }
+      .hero h1 { font-size: 32px; }
+      .hero-left { padding: 3rem 1.5rem 1rem; }
+      .hero-right { padding: 1.5rem 1.5rem 3rem; }
+      .hero-desc { font-size: 18px; }
+      .about, .how, .faq { padding: 6rem 0; }
+      .problem, .solution, .testimonials, .addons-section { padding: 6rem 0; }
+      .pricing { padding: 6rem 0; }
+      .cta { padding: 7rem 0; }
       .sticky-bar-inner { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
       .sticky-bar { padding: 1rem 1.5rem; }
-      .float-btn { bottom: 1.2rem; right: 1.2rem; }
-      .about-images { display: none; }
-      .popup { padding: 2rem 1.5rem; }
-      .pricing { padding: 5rem 0; }
-      .how, .about, .reviews, .faq, .problem { padding: 5rem 0; }
-      .cta { padding: 6rem 0; }
+      .float-btn { display: none; }
+      .popup { padding: 2.2rem 1.8rem; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .faq-item:hover { border-left: none; padding-left: 0; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .testimonials-placeholder { grid-template-columns: 1fr; }
+      .addons-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -726,33 +773,41 @@
   <nav>
     <a href="#" class="logo">Tabi <b>Fixer</b></a>
     <ul class="nav-links">
-      <li><a href="#problem">Why Tabi</a></li>
+      <li><a href="#about-me">About</a></li>
+      <li><a href="#how">How It Works</a></li>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a href="https://calendly.com/arthur-tabifixer/30min" target="_blank" class="nav-btn">Free 15-min Call</a>
+    <a href="https://calendly.com/arthur-tabifixer/1-hour-consultation-call" target="_blank" class="nav-btn">Free 15-min Call</a>
   </nav>
 
-  <!-- HERO: no image — full-width two-column text layout -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-headline">
+    <div class="hero-left">
       <div class="hero-kicker">
         <div class="hero-kicker-bar"></div>
-        <span class="label">Japan Travel Consulting &amp; Concierge</span>
+        <span class="label" style="margin-bottom:0">Japan Travel Concierge · Osaka-Based · Bilingual</span>
       </div>
       <h1>
-        Book restaurants<br />
-        you <em>can't access</em><br />
-        without Japanese.
+        Half American,<br />
+        Half Japanese.<br />
+        Your Bridge to<br />
+        the <em>Real Japan.</em>
       </h1>
     </div>
-    <div class="hero-body">
-      <p class="hero-desc">Most travelers spend weeks planning a trip to Japan — then hit a wall the moment they arrive. Restaurants that only take calls in Japanese. Hotels that can't process foreign cards. Bookings that don't exist on any English site. I bridge that gap. I'm an American who lives in Osaka, speaks fluent Japanese, and does the things you simply can't do from abroad.</p>
-      <p class="hero-origin">American-born · <span>Based in Osaka</span> · Making calls you can't make</p>
-      <div class="cta-group">
-        <a href="https://calendly.com/arthur-tabifixer/30min" target="_blank" class="btn-red">Start with a free 15-min call</a>
-        <a href="#pricing" class="btn-link">See what's included &rarr;</a>
+    <div class="hero-right">
+      <p class="hero-desc">I grew up between two worlds — now I help American travelers experience Japan the way locals do, without the language barriers or tourist traps.</p>
+      <p class="hero-origin">American-born · <span>Based in Osaka</span> · Fluent in both languages &amp; cultures</p>
+      <div class="hero-ctas">
+        <a href="#how" class="btn-red">See How It Works ↓</a>
+        <a href="https://calendly.com/arthur-tabifixer/1-hour-consultation-call" target="_blank" class="btn-link">Book a free 15-min call →</a>
+      </div>
+      <div class="trust-strip">
+        <span>50+ trips planned</span>
+        <span class="trust-strip-sep">·</span>
+        <span>US, UK, CA, AU travelers</span>
+        <span class="trust-strip-sep">·</span>
+        <span>Fast response guaranteed</span>
       </div>
     </div>
   </section>
@@ -764,173 +819,19 @@
       <span>Call-only, Locals-only Spots</span><span class="sep"> ✦ </span>
       <span>Local Pricing on Hotels &amp; Cars</span><span class="sep"> ✦ </span>
       <span>Real-time SOS Support</span><span class="sep"> ✦ </span>
-      <span>Bicultural &amp; Bilingual</span><span class="sep"> ✦ </span>
+      <span>Half American · Half Japanese</span><span class="sep"> ✦ </span>
       <span>Tokyo · Osaka · Kyoto · Hiroshima · Kanazawa</span><span class="sep"> ✦ </span>
       <span>Restaurant Reservations in Japanese</span><span class="sep"> ✦ </span>
       <span>Call-only, Locals-only Spots</span><span class="sep"> ✦ </span>
       <span>Local Pricing on Hotels &amp; Cars</span><span class="sep"> ✦ </span>
       <span>Real-time SOS Support</span><span class="sep"> ✦ </span>
-      <span>Bicultural &amp; Bilingual</span><span class="sep"> ✦ </span>
+      <span>Half American · Half Japanese</span><span class="sep"> ✦ </span>
       <span>Tokyo · Osaka · Kyoto · Hiroshima · Kanazawa</span><span class="sep"> ✦ </span>
     </div>
   </div>
 
-  <!-- PROBLEM -->
-  <section class="problem" id="problem">
-    <div class="container">
-      <div class="problem-layout">
-        <div class="problem-lead">
-          <span class="label">The Reality</span>
-          <h2>Japan rewards those who know where to <em>look.</em></h2>
-          <p>The best experiences aren't on Instagram. They're in izakayas with handwritten menus, restaurants that only take phone reservations, and neighborhoods tourists never find.</p>
-        </div>
-        <div class="pain-list">
-          <div class="pain-item">
-            <div class="pain-num">01</div>
-            <div>
-              <h3>The best spots don't take online bookings</h3>
-              <p>Call-only reservations in Japanese mean most tourists simply can't get in — no matter how much they want to.</p>
-            </div>
-          </div>
-          <div class="pain-item">
-            <div class="pain-num">02</div>
-            <div>
-              <h3>Everyone ends up in the same places</h3>
-              <p>Same reels. Same brochures. Same tourist restaurants. The real Japan is right there — you just need someone to show you.</p>
-            </div>
-          </div>
-          <div class="pain-item">
-            <div class="pain-num">03</div>
-            <div>
-              <h3>Train systems are ruthlessly complex</h3>
-              <p>Tokyo's rail network is massive. One wrong train costs you an hour. Having an SOS contact changes everything.</p>
-            </div>
-          </div>
-          <div class="pain-item">
-            <div class="pain-num">04</div>
-            <div>
-              <h3>Tourists overpay without knowing it</h3>
-              <p>Hotels, cars, experiences — local sites have better prices. I help you stretch every dollar further.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="pricing-head">
-        <div>
-          <span class="label" style="color:var(--gold)">Services &amp; Pricing</span>
-          <h2>Pick the level of support your trip deserves.</h2>
-        </div>
-        <p>Every plan saves you more than it costs. Savings on hotels and bookings alone often cover the fee entirely.</p>
-      </div>
-      <div class="plans">
-        <div class="plan">
-          <div class="plan-tier">Essential</div>
-          <div class="plan-price"><sup>$</sup>150<small>one-time</small></div>
-          <div class="plan-for">Best for: First-time visitors</div>
-          <div class="plan-pitch">Walk away with a curated plan most tourists spend weeks trying to piece together.</div>
-          <ul class="plan-features">
-            <li>1-hour consultation call</li>
-            <li>Personalized recap with restaurants &amp; activities</li>
-            <li>1–2 SOS support messages during your trip</li>
-            <li>Messaging support only</li>
-          </ul>
-          <a href="https://calendly.com/arthur-tabifixer/1-hour-consultation-call" target="_blank" class="plan-btn">Get Started</a>
-        </div>
-        <div class="plan featured">
-          <div class="plan-tag">Most Popular</div>
-          <div class="plan-tier">Standard</div>
-          <div class="plan-price"><sup>$</sup>299<small>one-time</small></div>
-          <div class="plan-for">Best for: Want reservations handled</div>
-          <div class="plan-pitch">I call the restaurants. I book the cars. Savings alone often cover the fee.</div>
-          <ul class="plan-features">
-            <li>Everything in Essential</li>
-            <li>Reservations made on your behalf — in Japanese</li>
-            <li>Access to call-only, locals-only restaurants</li>
-            <li>3–4 SOS support messages during your trip</li>
-            <li>Cost-saving research using local booking sites</li>
-          </ul>
-          <a href="https://calendly.com/arthur-tabifixer/30min" target="_blank" class="plan-btn">Get Started</a>
-        </div>
-        <div class="plan">
-          <div class="plan-tier">VIP Concierge</div>
-          <div class="plan-price"><sup>$</sup>699<small>up to 7 days</small></div>
-          <div class="plan-for">Best for: Full concierge experience</div>
-          <div class="plan-hotline">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-            Live phone hotline — call me anytime during your trip
-          </div>
-          <div class="plan-pitch">For travelers who want total peace of mind. I handle everything — and I'm reachable by phone the moment something goes wrong.</div>
-          <ul class="plan-features">
-            <li>Everything in Standard</li>
-            <li>Unlimited reservations for your full trip</li>
-            <li class="feature-highlight">Phone hotline — call me anytime while in Japan</li>
-            <li>Real-time help with navigation &amp; emergencies</li>
-            <li>Your personal concierge, on the ground</li>
-          </ul>
-          <a href="https://calendly.com/arthur-tabifixer/30min" target="_blank" class="plan-btn">Get Started</a>
-        </div>
-      </div>
-      <div class="addons">
-        <div class="addons-label">Add-ons</div>
-        <div class="addons-row">
-          <div class="addon">
-            <span class="addon-name">Airport Pickup</span>
-            <span class="addon-price">$150</span>
-          </div>
-          <div class="addon">
-            <span class="addon-name">Single Reservation</span>
-            <span class="addon-price">$25 / booking</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW -->
-  <section class="how" id="how">
-    <div class="container">
-      <div class="how-head">
-        <span class="label">The Process</span>
-        <h2>Three steps to a stress-free Japan trip.</h2>
-        <p>Simple from your end. I handle the complexity — the calls, the research, the coordination — all in Japanese, with insider knowledge you can't Google.</p>
-      </div>
-      <div class="steps-flow">
-        <div class="step-card">
-          <span class="step-counter">Step 01</span>
-          <h4>Tell me your vibe</h4>
-          <p>Share your expectations, must-sees, travel dates, and what you don't want to miss. I listen first.</p>
-          <div class="step-card-kanji">一</div>
-        </div>
-        <div class="step-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </div>
-        <div class="step-card">
-          <span class="step-counter">Step 02</span>
-          <h4>I plan &amp; book everything</h4>
-          <p>I handle the calls, the research, the reservations — in Japanese, using local sites, with insider knowledge.</p>
-          <div class="step-card-kanji">二</div>
-        </div>
-        <div class="step-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </div>
-        <div class="step-card">
-          <span class="step-counter">Step 03</span>
-          <h4>You enjoy Japan, stress-free</h4>
-          <p>Arrive knowing everything is sorted. I'm still on call if anything comes up while you're there.</p>
-          <div class="step-card-kanji">三</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ABOUT -->
-  <section class="about" id="about">
+  <section class="about" id="about-me">
     <div class="container">
       <div class="about-layout">
         <div class="about-images">
@@ -944,62 +845,242 @@
         </div>
         <div class="about-text">
           <span class="label">About</span>
-          <h2>Born in Osaka. Raised in New York. Living in Japan.</h2>
+          <h2>Born Between Two Worlds.</h2>
           <div class="about-rule"></div>
-          <p>Growing up between two cultures means I understand what Western travelers expect — and exactly where Japan surprises them. I've spent years taking friends and family past the tourist crowds, into the neighborhoods where locals actually eat, drink, and live.</p>
-          <p>I'm not reading from a guidebook. I know which restaurants are worth calling ahead for, which trains to take, and which hidden spots will be the highlight of your trip.</p>
+          <p>I'm Arthur — half American, half Japanese, fully bilingual. I grew up bouncing between the US and Japan, so I know what it's like to navigate both worlds. Now based in Osaka, I take my family to the kind of authentic spots you'd never find on Google — hole-in-the-wall izakayas, neighborhood festivals, local markets where no one speaks English.</p>
+          <p>When you book with me, I'm not just planning your trip. I'm slipping you into the same experiences I give my own family. No translation apps. No confusion. No settling for the tourist version. Just real Japan.</p>
           <div class="about-tags">
             <span class="tag-chip">Bicultural &amp; Bilingual</span>
             <span class="tag-chip">Based in Osaka</span>
             <span class="tag-chip">Local connections</span>
             <span class="tag-chip">Fast response</span>
           </div>
-          <a href="https://calendly.com/arthur-tabifixer/30min" target="_blank" class="btn-red">Book a free call &rarr;</a>
+          <a href="https://calendly.com/arthur-tabifixer/1-hour-consultation-call" target="_blank" class="btn-red">Book a free call &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS -->
-  <section class="reviews">
+  <!-- PROBLEM -->
+  <section class="problem" id="problem">
     <div class="container">
-      <div class="reviews-head">
-        <span class="label">Real Trips, Real Fixes</span>
-        <h2>What clients say.</h2>
+      <div class="problem-inner">
+        <span class="label">The Reality</span>
+        <h2>Planning Japan Shouldn't Feel Like Solving a Puzzle</h2>
+        <p class="problem-intro">You've seen the Instagram spots. You've read the blogs. But when it's time to actually book that kaiseki restaurant or figure out which onsen allows tattoos…</p>
+        <ul class="pain-list">
+          <li><span class="pain-dash">—</span> Restaurant websites are in Japanese only</li>
+          <li><span class="pain-dash">—</span> The best spots don't take online reservations</li>
+          <li><span class="pain-dash">—</span> Google Translate fails at the worst moments</li>
+          <li><span class="pain-dash">—</span> You're one wrong train away from losing half your day</li>
+          <li><span class="pain-dash">—</span> Tourist prices hide the better local deals</li>
+        </ul>
+        <p class="problem-resolve">That's where I come in. <em>Consider it handled.</em></p>
       </div>
-      <div class="reviews-grid">
-        <div class="review">
-          <div class="review-mark">"</div>
-          <p>I booked my rental car for the wrong day because of the time difference and had no way to fix it — no English support, no online option. He called the company and sorted everything out. I would've been a no-show and lost the booking entirely.</p>
-          <div class="review-author">
-            <div class="review-av">JO</div>
-            <div><div class="review-name">Johnathan 🇺🇸</div><div class="review-plan">Standard Plan</div></div>
-          </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution" id="solution">
+    <div class="container">
+      <div class="solution-layout">
+        <div class="solution-text">
+          <span class="label">The Fix</span>
+          <h2>Think of Me as Your Friend Who Actually Lives Here</h2>
+          <p class="solution-subhead">Because I do.</p>
+          <ul class="check-list">
+            <li><span class="check-mark">✓</span> I know which restaurants locals go to — and how to get you in</li>
+            <li><span class="check-mark">✓</span> I speak both languages fluently — no miscommunications</li>
+            <li><span class="check-mark">✓</span> I'm on the ground in Osaka — when plans go sideways, I fix them in real-time</li>
+            <li><span class="check-mark">✓</span> I understand American expectations AND Japanese etiquette</li>
+          </ul>
+          <p>You get the insider access of a local friend, with the reliability of a professional service.</p>
+          <a href="#pricing" class="btn-red" style="margin-top:0.5rem">Choose Your Plan ↓</a>
         </div>
-        <div class="review">
-          <div class="review-mark">"</div>
-          <p>I didn't realize how much I was overpaying until he looked at my bookings. He found better hotels using local sites I would never have known about. The savings alone easily covered his fee.</p>
-          <div class="review-author">
-            <div class="review-av">EM</div>
-            <div><div class="review-name">Emma 🇺🇸</div><div class="review-plan">Standard Plan</div></div>
-          </div>
-        </div>
-        <div class="review">
-          <div class="review-mark">"</div>
-          <p>Some of the best meals we had were at places that don't even take online reservations. He called and booked everything for us — no way we could've done that ourselves.</p>
-          <div class="review-author">
-            <div class="review-av">MA</div>
-            <div><div class="review-name">Marc 🇺🇸</div><div class="review-plan">VIP Concierge</div></div>
-          </div>
+        <div class="solution-card">
+          <p>I've spent years taking friends and family past the tourist crowds, into the neighborhoods where locals actually eat, drink, and live.</p>
+          <p>I'm not reading from a guidebook. I know which restaurants are worth calling ahead for, which trains to take, and which hidden spots will be the highlight of your trip.</p>
+          <p>Growing up between two cultures means I understand what Western travelers expect — and exactly where Japan surprises them.</p>
+          <div class="solution-card-kanji">橋</div>
         </div>
       </div>
-      <div class="trust-bar">
-        <span>50+ Japan trips planned</span>
-        <span class="trust-sep">·</span>
-        <span>Travelers from the US, UK, Canada &amp; Australia</span>
-        <span class="trust-sep">·</span>
-        <span>All of Japan covered</span>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="how-head">
+        <span class="label">The Process</span>
+        <h2>How It Works</h2>
+        <p class="lead">Simple from your end. I handle the complexity — the calls, the research, the coordination — all in Japanese, with insider knowledge you can't Google.</p>
       </div>
+      <div class="steps-flow">
+        <div class="step-card">
+          <span class="step-counter">Step 01</span>
+          <h4>Book Your Plan</h4>
+          <p>Choose the service tier that fits your trip. Payment is secure via Stripe. I confirm within a few hours.</p>
+          <div class="step-card-kanji">一</div>
+        </div>
+        <div class="step-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="step-card">
+          <span class="step-counter">Step 02</span>
+          <h4>Consultation Call</h4>
+          <p>We jump on a video call to discuss your travel style, interests, and must-dos. This is where I learn what makes your trip special.</p>
+          <div class="step-card-kanji">二</div>
+        </div>
+        <div class="step-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="step-card">
+          <span class="step-counter">Step 03</span>
+          <h4>Get Your Itinerary</h4>
+          <p>Within 24 hours of our call, you'll receive a detailed itinerary — restaurants, hidden gems, timing, and insider tips. Plus and VIP clients get full reservations handled.</p>
+          <div class="step-card-kanji">三</div>
+        </div>
+        <div class="step-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="step-card">
+          <span class="step-counter">Step 04</span>
+          <h4>Enjoy Japan, stress-free</h4>
+          <p>Arrive knowing everything is sorted. I'm still on call during your trip — because plans change, and that's exactly what I'm here for.</p>
+          <div class="step-card-kanji">四</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing-head">
+        <div>
+          <span class="label">Services &amp; Pricing</span>
+          <h2>Choose Your Plan</h2>
+        </div>
+        <p>Every plan saves you more than it costs. Savings on hotels and bookings alone often cover the fee entirely.</p>
+      </div>
+
+      <div class="terms-check-row">
+        <label class="terms-check-label" for="termsCheck">
+          <input type="checkbox" id="termsCheck" />
+          I have read and agree to the <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>
+        </label>
+        <p class="terms-check-hint" id="termsHint">Please agree to the Terms of Service before proceeding to payment.</p>
+      </div>
+
+      <div class="plans">
+        <!-- BASIC -->
+        <div class="plan">
+          <div class="plan-tier">Basic</div>
+          <div class="plan-price"><sup>$</sup>150<small>one-time</small></div>
+          <div class="plan-for">Best for: Independent travelers</div>
+          <div class="plan-pitch">Walk away with your personal map to authentic Japan — most tourists spend weeks trying to piece this together.</div>
+          <ul class="plan-features">
+            <li>60-minute consultation call</li>
+            <li>Custom itinerary PDF (within 24 hours of call)</li>
+            <li>Restaurant &amp; activity recommendations</li>
+            <li>Up to 4 SOS support messages during your trip</li>
+            <li>Covers up to 7 days of travel</li>
+          </ul>
+          <a href="https://buy.stripe.com/fZu4gy5SFh287905qt2Ry02" target="_blank" class="plan-btn">Get Started</a>
+        </div>
+        <!-- PLUS (FEATURED) -->
+        <div class="plan featured">
+          <div class="plan-tag">Most Popular</div>
+          <div class="plan-tier">Plus</div>
+          <div class="plan-price"><sup>$</sup>299<small>one-time</small></div>
+          <div class="plan-for">Best for: Want reservations handled</div>
+          <div class="plan-pitch">I call the restaurants. I book the spots. Savings alone often cover the entire fee.</div>
+          <ul class="plan-features">
+            <li>Everything in Basic</li>
+            <li>Book you into restaurants where locals eat</li>
+            <li>Access to call-only, locals-only spots</li>
+            <li>Priority messaging support</li>
+            <li>One additional itinerary revision</li>
+            <li>Covers up to 10 days of travel</li>
+          </ul>
+          <a href="https://buy.stripe.com/14AcN4gxj9zGgJAg572Ry00" target="_blank" class="plan-btn">Get Started</a>
+        </div>
+        <!-- VIP -->
+        <div class="plan">
+          <div class="plan-tier">VIP</div>
+          <div class="plan-price"><sup>$</sup>699<small>one-time</small></div>
+          <div class="plan-for">Best for: Full concierge experience</div>
+          <div class="plan-hotline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            Direct line to me — because plans change
+          </div>
+          <div class="plan-pitch">For travelers who want total peace of mind. I handle everything and I'm reachable by phone the moment something goes wrong.</div>
+          <ul class="plan-features">
+            <li>Everything in Plus</li>
+            <li>Unlimited reservations for your full trip</li>
+            <li class="feature-highlight">Phone hotline — call me anytime while in Japan</li>
+            <li>24/7 direct line during your trip</li>
+            <li>Last-minute reservation troubleshooting</li>
+            <li>Covers up to 14 days of travel</li>
+          </ul>
+          <a href="https://buy.stripe.com/9B6l4m5SF8vC3WOcSV2Ry01" target="_blank" class="plan-btn">Get Started</a>
+        </div>
+      </div>
+
+      <p class="terms-note">By purchasing, you agree to our <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <!-- ADD-ONS -->
+  <section class="addons-section" id="addons">
+    <div class="container">
+      <span class="label">Add-Ons</span>
+      <h2>Extras Worth Adding</h2>
+      <p class="lead">Available with any plan. Book separately or ask during your consultation call.</p>
+      <div class="addons-grid">
+        <div class="addon-card">
+          <div class="addon-card-name">Private Airport Transfer — Itami (ITM)</div>
+          <div class="addon-card-price">¥30,000</div>
+          <div class="addon-card-desc">Skip the train chaos. English-speaking driver, meet-and-greet at arrivals, direct to your hotel.</div>
+        </div>
+        <div class="addon-card">
+          <div class="addon-card-name">Private Airport Transfer — Kansai (KIX)</div>
+          <div class="addon-card-price">¥35,000</div>
+          <div class="addon-card-desc">Private car from Kansai International to anywhere in Osaka or Kyoto. Comfortable, stress-free arrival.</div>
+        </div>
+        <div class="addon-card">
+          <div class="addon-card-name">Single Restaurant Reservation</div>
+          <div class="addon-card-price">$25</div>
+          <div class="addon-card-desc">Need one booking sorted? I'll call ahead, confirm in Japanese, and lock in your table.</div>
+        </div>
+      </div>
+      <p style="margin-top:2rem; font-size:15px; color:var(--muted);">Want a full personal guide day? Available on request — <a href="mailto:arthur@tabifixer.com" style="color:var(--red); text-decoration:none; border-bottom: 1px solid rgba(184,35,24,0.3);">email me</a> for custom pricing.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials-head">
+        <span class="label">Testimonials</span>
+        <h2>What Travelers Are Saying</h2>
+        <p>TABI FIXER is just getting started. Be one of the first to experience authentic Japan with a bicultural guide.</p>
+      </div>
+      <div class="testimonials-placeholder">
+        <div class="testimonial-card-empty">
+          <div class="t-icon">"</div>
+          <p>Verified review coming soon</p>
+        </div>
+        <div class="testimonial-card-empty">
+          <div class="t-icon">"</div>
+          <p>Verified review coming soon</p>
+        </div>
+        <div class="testimonial-card-empty">
+          <div class="t-icon">"</div>
+          <p>Verified review coming soon</p>
+        </div>
+      </div>
+      <p class="testimonials-note">Verified reviews coming soon via <a href="#">TripAdvisor</a>.</p>
     </div>
   </section>
 
@@ -1009,29 +1090,42 @@
       <div class="faq-layout">
         <div class="faq-side">
           <span class="label">Common Questions</span>
-          <h2>FAQ</h2>
-          <p>Still have questions? Book a free 15-minute call — no commitment needed.</p>
+          <h2>Things people ask before booking.</h2>
+          <p>Still unsure? Book a free 15-minute call — no commitment needed. I'll tell you exactly what I can do for your trip.</p>
+          <a href="https://calendly.com/arthur-tabifixer/1-hour-consultation-call" target="_blank" class="btn-red">Book a Free Call</a>
         </div>
         <div class="faq-list">
           <div class="faq-item">
-            <div class="faq-q">Do you cover all of Japan, or just Tokyo?</div>
-            <div class="faq-a">All of Japan. Tokyo, Osaka, Kyoto, Hiroshima, Kanazawa — wherever your trip takes you, I can help plan and book it.</div>
+            <div class="faq-q">How is this different from a tour guide?</div>
+            <div class="faq-a">I'm not walking around with you — I'm your behind-the-scenes fixer. I handle the planning, bookings, and problem-solving so you can just show up and experience Japan. Think personal concierge, not tour leader.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-q">Do I pay upfront?</div>
-            <div class="faq-a">Yes, payment is made upfront to confirm your booking. I accept major credit cards and PayPal.</div>
+            <div class="faq-q">What if I need to cancel?</div>
+            <div class="faq-a">7+ days before your consultation call: full refund. 3–7 days before: 50% refund. Less than 3 days: no refund. Full details in our <a href="terms.html" target="_blank">Terms of Service</a>.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-q">What if my plans change?</div>
-            <div class="faq-a">Life happens. If your trip changes, reach out and I'll do my best to adjust reservations. Cancellation policies vary by venue, but I'll always handle it in Japanese on your behalf.</div>
+            <div class="faq-q">Do you only cover Osaka?</div>
+            <div class="faq-a">I'm based in Osaka, but I plan itineraries for anywhere in Japan. My expertise is strongest in Kansai (Osaka, Kyoto, Nara), but I've traveled extensively across the whole country.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-q">How quickly do you respond when I need help during my trip?</div>
-            <div class="faq-a">I typically respond within a few hours. If it's urgent, I prioritize it immediately — that's the whole point of having someone on the ground.</div>
+            <div class="faq-q">How fast do you respond?</div>
+            <div class="faq-a">Between 9AM–5PM Japan time, mostly within 30 minutes. Outside those hours, guaranteed within 2 hours. Same across all plans.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-q">My trip is longer than 7 days — can you still help?</div>
-            <div class="faq-a">Absolutely. The VIP plan covers up to 7 days. For longer trips, just reach out and I'll put together a custom quote.</div>
+            <div class="faq-q">What if a restaurant cancels or is fully booked?</div>
+            <div class="faq-a">I'll find you an alternative of equal or better quality. Part of my value is having backup options and local connections — I've never left a client without a great dinner.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">What if something goes wrong during my trip?</div>
+            <div class="faq-a">VIP clients have my direct phone number — I pick up. Basic and Plus clients reach me via message. I respond fast and I fix things.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Can you help with visa questions?</div>
+            <div class="faq-a">I can provide general guidance, but visa processing is your responsibility. For complex situations, I'd recommend consulting an immigration lawyer.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">What languages do you speak?</div>
+            <div class="faq-a">English and Japanese, both fluently. I grew up between the two — no awkward translation, no cultural misunderstandings.</div>
           </div>
         </div>
       </div>
@@ -1039,14 +1133,17 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta" id="contact">
+  <section class="cta">
     <div class="container">
-      <span class="label">Ready to Begin?</span>
-      <h2>Stop guessing. Start <em>experiencing Japan.</em></h2>
+      <span class="label">Ready?</span>
+      <h2>Ready to experience the <em>real Japan?</em></h2>
       <div class="cta-rule"></div>
-      <p>Book a free 15-minute call. No commitment — just tell me about your trip and I'll show you what's possible.</p>
-      <a href="https://calendly.com/arthur-tabifixer/30min" target="_blank" class="btn-red">Book your free call</a>
-      <div class="cta-foot">I take on a limited number of trips each month — if you're planning ahead, book early.</div>
+      <p>Stop Googling. Start exploring. One free 15-minute call is all it takes.</p>
+      <div class="cta-btns">
+        <a href="https://calendly.com/arthur-tabifixer/1-hour-consultation-call" target="_blank" class="btn-red">Book My Free 15-Min Call →</a>
+        <a href="mailto:arthur@tabifixer.com" class="btn-outline">Send an Email</a>
+      </div>
+      <p class="cta-note">I take on a limited number of trips each month — if you're planning ahead, book early.</p>
     </div>
   </section>
 
@@ -1056,37 +1153,47 @@
       <div class="footer-grid">
         <div class="footer-about">
           <a href="#" class="footer-logo">Tabi <b>Fixer</b></a>
-          <p>Japan travel consultation &amp; concierge service. Based in Osaka, operating nationwide.</p>
+          <p>Half American, half Japanese — I help travelers experience Japan the way locals do. Based in Osaka.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="#pricing">Essential — $150</a></li>
-            <li><a href="#pricing">Standard — $299</a></li>
-            <li><a href="#pricing">VIP Concierge — $699</a></li>
-            <li><a href="#pricing">Single Reservation — $25</a></li>
+            <li><a href="#pricing">Basic Plan — $150</a></li>
+            <li><a href="#pricing">Plus Plan — $299</a></li>
+            <li><a href="#pricing">VIP Plan — $699</a></li>
+            <li><a href="#addons">Add-ons</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li><a href="https://calendly.com/arthur-tabifixer/30min" target="_blank">Book a free call</a></li>
-            <li><a href="mailto:arthur.tabifixer@gmail.com">arthur.tabifixer@gmail.com</a></li>
-            <li><a href="#" target="_blank">Instagram (coming soon)</a></li>
+            <li><a href="https://calendly.com/arthur-tabifixer/1-hour-consultation-call" target="_blank">Book a Free Call</a></li>
+            <li><a href="mailto:arthur@tabifixer.com">arthur@tabifixer.com</a></li>
+            <li><a href="tel:07037724488">070-3772-4488</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+            <li><a href="terms-ja.html">利用規約（日本語）</a></li>
+            <li><a href="privacy-ja.html">プライバシーポリシー（日本語）</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Tabi Fixer. All rights reserved.</span>
-        <span class="footer-jp">旅 · 案内 · 大阪</span>
+        <span>© 2026 Tabi Fixer · Arthur K. Brown · Osaka, Japan</span>
+        <span class="footer-jp">旅</span>
       </div>
     </div>
   </footer>
 
   <!-- FLOATING BUTTON -->
-  <a href="https://calendly.com/arthur-tabifixer/30min" target="_blank" class="float-btn" id="floatBtn" aria-label="Book a free call">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-    <span>Free Call</span>
+  <a href="https://calendly.com/arthur-tabifixer/1-hour-consultation-call" target="_blank" class="float-btn" id="floatBtn">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Free Call
   </a>
 
   <!-- STICKY BAR -->
@@ -1094,73 +1201,78 @@
     <div class="sticky-bar-inner">
       <div class="sticky-bar-text">
         <span class="sticky-bar-label">Ready to fix your Japan trip?</span>
-        <span class="sticky-bar-sub">No commitment · Free 15-minute call · I typically respond within a few hours</span>
+        <span class="sticky-bar-sub">No commitment · Free 15-minute call · Mostly within 30 mins 9AM–5PM JST</span>
       </div>
-      <a href="https://calendly.com/arthur-tabifixer/30min" target="_blank" class="sticky-bar-btn">Book your free call &rarr;</a>
+      <a href="https://calendly.com/arthur-tabifixer/1-hour-consultation-call" target="_blank" class="sticky-bar-btn">Book Your Free Call →</a>
     </div>
-    <button class="sticky-bar-close" id="stickyClose" aria-label="Close">&times;</button>
+    <button class="sticky-bar-close" id="stickyClose" aria-label="Close">×</button>
   </div>
 
-  <!-- EXIT-INTENT POPUP — shows only once, only on mouse-leave -->
+  <!-- POPUP -->
   <div class="popup-overlay" id="popupOverlay">
-    <div class="popup" role="dialog" aria-modal="true">
-      <button class="popup-close" id="popupClose" aria-label="Close">&times;</button>
-      <div class="popup-kanji" aria-hidden="true">旅</div>
-      <div class="popup-label">Before you go</div>
-      <h2 class="popup-title">Not sure which plan<br /><em>is right for you?</em></h2>
-      <p class="popup-desc">Book a free 15-minute call. Tell me about your trip — I'll tell you exactly what's possible and what you actually need.</p>
-      <a href="https://calendly.com/arthur-tabifixer/30min" target="_blank" class="popup-btn">Start with a free call</a>
-      <div class="popup-note">No commitment. No payment. Just a conversation.</div>
+    <div class="popup">
+      <div class="popup-kanji">旅</div>
+      <button class="popup-close" id="popupClose" aria-label="Close">×</button>
+      <span class="popup-label">Before you go</span>
+      <h2 class="popup-title">One call changes your whole <em>trip.</em></h2>
+      <p class="popup-desc">15 minutes. Free. I'll tell you exactly what I can do for your Japan trip — restaurants, bookings, local deals. No pressure, no commitment.</p>
+      <a href="https://calendly.com/arthur-tabifixer/1-hour-consultation-call" target="_blank" class="popup-btn">Book My Free 15-Min Call →</a>
+      <p class="popup-note">No credit card needed · Spots are limited each month</p>
     </div>
   </div>
 
   <script>
-    (function () {
-      const floatBtn    = document.getElementById('floatBtn');
-      const stickyBar   = document.getElementById('stickyBar');
-      const stickyClose = document.getElementById('stickyClose');
-      const overlay     = document.getElementById('popupOverlay');
-      const popupClose  = document.getElementById('popupClose');
+    // Float button
+    const floatBtn = document.getElementById('floatBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) floatBtn.classList.add('visible');
+      else floatBtn.classList.remove('visible');
+    }, { passive: true });
 
-      let stickyDismissed = false;
-      let popupShown = false;
+    // Sticky bar
+    const stickyBar = document.getElementById('stickyBar');
+    const stickyClose = document.getElementById('stickyClose');
+    let stickyDismissed = false;
+    let popupShown = false;
+    window.addEventListener('scroll', () => {
+      if (!stickyDismissed && !popupShown && window.scrollY > 600)
+        stickyBar.classList.add('visible');
+    }, { passive: true });
+    stickyClose.addEventListener('click', () => {
+      stickyBar.classList.remove('visible');
+      stickyDismissed = true;
+    });
 
-      /* Float button + sticky bar on scroll */
-      window.addEventListener('scroll', function () {
-        const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        floatBtn.classList.toggle('visible', pct > 0.3);
-        /* Don't show sticky if popup is currently visible or already dismissed */
-        if (!stickyDismissed && !popupShown) {
-          stickyBar.classList.toggle('visible', pct > 0.6);
-        }
-      }, { passive: true });
-
-      /* Dismiss sticky */
-      stickyClose.addEventListener('click', function () {
-        stickyDismissed = true;
+    // Popup — exit intent only
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupClose = document.getElementById('popupClose');
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY <= 0 && !popupShown && window.scrollY > 200) {
+        popupOverlay.classList.add('visible');
+        popupShown = true;
         stickyBar.classList.remove('visible');
-      });
+      }
+    });
+    popupClose.addEventListener('click', () => popupOverlay.classList.remove('visible'));
+    popupOverlay.addEventListener('click', (e) => {
+      if (e.target === popupOverlay) popupOverlay.classList.remove('visible');
+    });
 
-      /* Exit-intent popup — once only, only on mouse leaving page from the top */
-      document.addEventListener('mouseleave', function (e) {
-        if (e.clientY <= 0 && !popupShown) {
-          popupShown = true;
-          /* Hide sticky bar while popup is showing to avoid overlap */
-          stickyBar.classList.remove('visible');
-          overlay.classList.add('visible');
+    // Terms checkbox — intercept plan button clicks
+    const termsCheck = document.getElementById('termsCheck');
+    const termsHint = document.getElementById('termsHint');
+    document.querySelectorAll('.plan-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (!termsCheck.checked) {
+          e.preventDefault();
+          termsHint.classList.add('visible');
+          termsCheck.closest('.terms-check-row').scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       });
-
-      /* Close popup — restore sticky bar if it was showing before */
-      function closePopup() {
-        overlay.classList.remove('visible');
-        /* Re-enable sticky bar logic on next scroll event (if not dismissed) */
-      }
-      popupClose.addEventListener('click', closePopup);
-      overlay.addEventListener('click', function (e) { if (e.target === overlay) closePopup(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePopup(); });
-    })();
+    });
+    termsCheck.addEventListener('change', () => {
+      if (termsCheck.checked) termsHint.classList.remove('visible');
+    });
   </script>
-
 </body>
 </html>

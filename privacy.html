@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Tabi Fixer</title>
+  <meta name="description" content="Tabi Fixer Privacy Policy — how we collect, use, and protect your personal information." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #181614;
+      --cream:  #f7f2eb;
+      --warm:   #ede8df;
+      --red:    #b82318;
+      --gold:   #a8844e;
+      --muted:  #6e6560;
+      --border: rgba(24,22,20,0.09);
+      --dark:   #4a3f38;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.75;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      font-weight: 400;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 0 2.5rem; }
+
+    h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(36px, 5vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(22px, 2.8vw, 30px);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    p { margin-bottom: 1rem; color: var(--dark); }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; color: var(--dark); }
+    li { margin-bottom: 0.4rem; }
+    em { font-style: italic; color: var(--red); }
+    a { color: var(--red); text-decoration: underline; }
+    a:hover { opacity: 0.75; }
+
+    .label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    /* ── NAV ──────────────────────────────────── */
+    nav {
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.35rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .logo span { color: var(--red); }
+    .nav-back {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--ink); }
+
+    /* ── HERO BANNER ─────────────────────────── */
+    .privacy-hero {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 5rem 0 4rem;
+      text-align: center;
+    }
+    .privacy-hero .label { color: var(--gold); margin-bottom: 1rem; display: block; }
+    .privacy-hero h1 { color: var(--cream); margin-bottom: 1rem; }
+    .privacy-hero .updated {
+      font-size: 14px;
+      color: rgba(247,242,235,0.5);
+      margin-top: 1.5rem;
+    }
+
+    /* ── CONTENT ─────────────────────────────── */
+    .privacy-body {
+      padding: 5rem 0 7rem;
+    }
+
+    .privacy-section {
+      margin-bottom: 1rem;
+    }
+
+    .privacy-section .section-number {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .highlight-box {
+      background: var(--warm);
+      border-left: 3px solid var(--red);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 6px 6px 0;
+      margin: 1.5rem 0;
+    }
+    .highlight-box p { margin-bottom: 0; }
+    .highlight-box p + p { margin-top: 0.75rem; margin-bottom: 0; }
+
+    .info-box {
+      background: var(--warm);
+      border-left: 3px solid var(--gold);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 6px 6px 0;
+      margin: 1.5rem 0;
+    }
+    .info-box p { margin-bottom: 0; color: var(--muted); }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer {
+      background: var(--ink);
+      color: rgba(247,242,235,0.55);
+      padding: 3rem 0;
+      font-size: 14px;
+    }
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.3rem;
+      color: var(--cream);
+      text-decoration: none;
+    }
+    .footer-logo span { color: var(--red); }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a {
+      color: rgba(247,242,235,0.55);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--cream); }
+    .footer-copy { font-size: 13px; opacity: 0.5; }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 1.25rem; }
+      .nav-inner { padding: 0 1.25rem; }
+      .privacy-hero { padding: 3.5rem 1.25rem 3rem; }
+      .privacy-body { padding: 3.5rem 0 5rem; }
+      h2 { margin-top: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Tabi<span>Fixer</span></a>
+      <a href="index.html" class="nav-back">← Back to main site</a>
+    </div>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <div class="privacy-hero">
+    <div class="container">
+      <span class="label">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last Updated: April 9, 2026</p>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <main class="privacy-body">
+    <div class="container">
+
+      <div class="highlight-box">
+        <p>Your privacy matters. This policy explains what information we collect, how we use it, and your rights regarding your personal data. If you have any questions, reach out directly at <a href="mailto:arthur@tabifixer.com">arthur@tabifixer.com</a>.</p>
+      </div>
+
+      <!-- 01. Information We Collect -->
+      <section class="privacy-section">
+        <h2><span class="section-number">01</span>Information We Collect</h2>
+
+        <h3>Personal Information</h3>
+        <p>When you use Tabi Fixer's services, we may collect the following personal information:</p>
+        <ul>
+          <li>Name</li>
+          <li>Email address</li>
+          <li>Phone number</li>
+          <li>Travel dates and destination</li>
+          <li>Dietary restrictions, preferences, and special requests</li>
+          <li>Payment information (processed securely via Stripe; we do not store credit card details)</li>
+        </ul>
+
+        <h3>Automatically Collected Information</h3>
+        <p>When you visit our website, we may automatically collect:</p>
+        <ul>
+          <li>Website usage data (via Google Analytics)</li>
+          <li>IP address</li>
+          <li>Browser type and device information</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- 02. How We Use Your Information -->
+      <section class="privacy-section">
+        <h2><span class="section-number">02</span>How We Use Your Information</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Provide personalized travel concierge services</li>
+          <li>Create custom itineraries and make reservations</li>
+          <li>Communicate with you about your trip</li>
+          <li>Respond to inquiries and provide support</li>
+          <li>Improve our services</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- 03. Information Sharing -->
+      <section class="privacy-section">
+        <h2><span class="section-number">03</span>Information Sharing</h2>
+
+        <div class="highlight-box">
+          <p><strong>We do not sell, rent, or trade your personal information to third parties.</strong></p>
+        </div>
+
+        <p>We may share limited information only in the following circumstances:</p>
+        <ul>
+          <li><strong>Restaurants and service providers</strong> — your name, contact details, party size, and dietary restrictions may be shared when making reservations or arrangements on your behalf</li>
+          <li><strong>Payment processors</strong> — Stripe processes payments securely; we do not store your card details</li>
+          <li><strong>Legal authorities</strong> — if required by applicable law or legal process</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- 04. Data Security -->
+      <section class="privacy-section">
+        <h2><span class="section-number">04</span>Data Security</h2>
+        <p>We implement appropriate technical and organisational security measures to protect your personal information from unauthorised access, alteration, disclosure, or destruction.</p>
+        <div class="info-box">
+          <p>No method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee absolute security.</p>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- 05. Data Retention -->
+      <section class="privacy-section">
+        <h2><span class="section-number">05</span>Data Retention</h2>
+        <p>We retain your personal information for as long as necessary to provide our services and comply with legal obligations. Once your information is no longer needed, we will delete or anonymise it.</p>
+        <p>You may request deletion of your personal data at any time by contacting us directly.</p>
+      </section>
+
+      <hr />
+
+      <!-- 06. Your Rights -->
+      <section class="privacy-section">
+        <h2><span class="section-number">06</span>Your Rights</h2>
+        <p>You have the following rights regarding your personal information:</p>
+        <ul>
+          <li><strong>Access</strong> — request a copy of the personal information we hold about you</li>
+          <li><strong>Correction</strong> — request that we correct any inaccurate or incomplete information</li>
+          <li><strong>Deletion</strong> — request that we delete your personal information</li>
+          <li><strong>Opt out of marketing</strong> — unsubscribe from any marketing communications at any time</li>
+          <li><strong>Withdraw consent</strong> — where processing is based on consent, you may withdraw it at any time</li>
+        </ul>
+        <p>To exercise any of these rights, please contact us at <a href="mailto:arthur@tabifixer.com">arthur@tabifixer.com</a>.</p>
+      </section>
+
+      <hr />
+
+      <!-- 07. Cookies -->
+      <section class="privacy-section">
+        <h2><span class="section-number">07</span>Cookies</h2>
+        <p>We may use cookies and similar tracking technologies to improve your experience on our website. Cookies help us understand how visitors use our site so we can make improvements.</p>
+        <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, some features of our site may not function properly if cookies are disabled.</p>
+      </section>
+
+      <hr />
+
+      <!-- 08. Third-Party Links -->
+      <section class="privacy-section">
+        <h2><span class="section-number">08</span>Third-Party Links</h2>
+        <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of those sites and encourage you to review their privacy policies before providing any personal information.</p>
+      </section>
+
+      <hr />
+
+      <!-- 09. Children's Privacy -->
+      <section class="privacy-section">
+        <h2><span class="section-number">09</span>Children's Privacy</h2>
+        <p>Tabi Fixer does not knowingly collect personal information from children under the age of 18. If you believe we have inadvertently collected such information, please contact us immediately and we will take steps to delete it.</p>
+      </section>
+
+      <hr />
+
+      <!-- 10. Changes to This Policy -->
+      <section class="privacy-section">
+        <h2><span class="section-number">10</span>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this policy periodically.</p>
+        <p>For bookings already in progress at the time of any update, the policy in effect at the time your information was collected continues to apply.</p>
+      </section>
+
+      <hr />
+
+      <!-- 11. Contact Us -->
+      <section class="privacy-section">
+        <h2><span class="section-number">11</span>Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal data, please get in touch:</p>
+        <p>
+          <strong>Arthur K. Brown / TABI FIXER</strong><br />
+          <strong>Email:</strong> <a href="mailto:arthur@tabifixer.com">arthur@tabifixer.com</a><br />
+          <strong>Phone:</strong> 070-3772-4488<br />
+          <strong>Address:</strong> 〒535-0003 大阪府大阪市旭区中宮3丁目8-22 セレブ中宮 202
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">Tabi<span>Fixer</span></a>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="tokushoho.html">特定商取引法</a>
+        <a href="terms-ja.html">利用規約</a>
+        <a href="privacy-ja.html">プライバシーポリシー</a>
+        <a href="mailto:arthur@tabifixer.com">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Tabi Fixer. Based in Osaka, Japan.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

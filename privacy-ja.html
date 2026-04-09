@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プライバシーポリシー — Tabi Fixer</title>
+  <meta name="description" content="Tabi Fixer プライバシーポリシー — 個人情報の取り扱いについて。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #181614;
+      --cream:  #f7f2eb;
+      --warm:   #ede8df;
+      --red:    #b82318;
+      --gold:   #a8844e;
+      --muted:  #6e6560;
+      --border: rgba(24,22,20,0.09);
+      --dark:   #4a3f38;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.75;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      font-weight: 400;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 0 2.5rem; }
+
+    h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(36px, 5vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(22px, 2.8vw, 30px);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    p { margin-bottom: 1rem; color: var(--dark); }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; color: var(--dark); }
+    li { margin-bottom: 0.4rem; }
+    em { font-style: italic; color: var(--red); }
+    a { color: var(--red); text-decoration: underline; }
+    a:hover { opacity: 0.75; }
+
+    .label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    /* ── NAV ──────────────────────────────────── */
+    nav {
+      background: rgba(247,242,235,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.35rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .logo span { color: var(--red); }
+    .nav-back {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--ink); }
+
+    /* ── HERO BANNER ─────────────────────────── */
+    .terms-hero {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 8rem 0 5rem;
+      text-align: center;
+    }
+    .terms-hero .label { color: var(--gold); margin-bottom: 1rem; display: block; }
+    .terms-hero h1 { color: var(--cream); margin-bottom: 1rem; }
+    .terms-hero .updated {
+      font-size: 14px;
+      color: rgba(247,242,235,0.5);
+      margin-top: 1.5rem;
+    }
+
+    /* ── CONTENT ─────────────────────────────── */
+    .terms-body {
+      padding: 5rem 0 7rem;
+    }
+
+    .terms-section {
+      margin-bottom: 1rem;
+    }
+
+    .terms-section .section-number {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .highlight-box {
+      background: var(--warm);
+      border-left: 3px solid var(--red);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 6px 6px 0;
+      margin: 1.5rem 0;
+    }
+    .highlight-box p { margin-bottom: 0; }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer {
+      background: var(--ink);
+      color: rgba(247,242,235,0.55);
+      padding: 3rem 0;
+      font-size: 14px;
+    }
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.3rem;
+      color: var(--cream);
+      text-decoration: none;
+    }
+    .footer-logo span { color: var(--red); }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a {
+      color: rgba(247,242,235,0.55);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--cream); }
+    .footer-copy { font-size: 13px; opacity: 0.5; }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 1.25rem; }
+      .nav-inner { padding: 0 1.25rem; }
+      .terms-hero { padding: 6.5rem 1.25rem 3.5rem; }
+      .terms-body { padding: 3.5rem 0 5rem; }
+      h2 { margin-top: 2.5rem; }
+      .footer-links { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Tabi<span>Fixer</span></a>
+      <a href="index.html" class="nav-back">← Back to main site</a>
+    </div>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <div class="terms-hero">
+    <div class="container">
+      <span class="label">法的情報</span>
+      <h1>プライバシーポリシー</h1>
+      <p class="updated">最終更新日：2026年4月9日</p>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <main class="terms-body">
+    <div class="container">
+
+      <!-- 01 収集する情報 -->
+      <section class="terms-section">
+        <h2><span class="section-number">01</span>収集する情報</h2>
+
+        <h3>個人情報</h3>
+        <ul>
+          <li>氏名、メールアドレス、電話番号</li>
+          <li>旅行日程・目的地</li>
+          <li>食事制限・嗜好・特別なリクエスト</li>
+          <li>決済情報（Stripe経由で安全に処理。クレジットカード情報は保存しません）</li>
+        </ul>
+
+        <h3>自動収集情報</h3>
+        <ul>
+          <li>ウェブサイト利用データ（Google Analytics等）</li>
+          <li>IPアドレス</li>
+          <li>ブラウザ種別・デバイス情報</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- 02 情報の利用目的 -->
+      <section class="terms-section">
+        <h2><span class="section-number">02</span>情報の利用目的</h2>
+        <ul>
+          <li>パーソナル旅行コンシェルジュサービスの提供</li>
+          <li>カスタム旅程作成および予約手配</li>
+          <li>お客様とのコミュニケーション</li>
+          <li>お問い合わせ対応・サポート提供</li>
+          <li>サービス改善</li>
+          <li>法令遵守</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- 03 情報の第三者提供 -->
+      <section class="terms-section">
+        <h2><span class="section-number">03</span>情報の第三者提供</h2>
+        <p>お客様の個人情報を第三者に販売・賃貸・取引することはありません。共有するのは以下の場合のみです。</p>
+        <ul>
+          <li>レストラン・サービス提供者（予約に必要な情報のみ）</li>
+          <li>Stripe（決済処理）</li>
+          <li>法的機関（法令に基づく要請がある場合）</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- 04 データセキュリティ -->
+      <section class="terms-section">
+        <h2><span class="section-number">04</span>データセキュリティ</h2>
+        <p>適切なセキュリティ対策を実施しています。ただし、インターネット通信は100%安全ではありません。</p>
+      </section>
+
+      <hr />
+
+      <!-- 05 データ保持期間 -->
+      <section class="terms-section">
+        <h2><span class="section-number">05</span>データ保持期間</h2>
+        <p>サービス提供および法令遵守に必要な期間保持します。いつでもデータ削除を依頼できます。</p>
+      </section>
+
+      <hr />
+
+      <!-- 06 お客様の権利 -->
+      <section class="terms-section">
+        <h2><span class="section-number">06</span>お客様の権利</h2>
+        <ul>
+          <li>個人情報へのアクセス</li>
+          <li>不正確なデータの訂正依頼</li>
+          <li>データ削除依頼</li>
+          <li>マーケティング通信のオプトアウト</li>
+          <li>同意の撤回</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- 07 Cookie -->
+      <section class="terms-section">
+        <h2><span class="section-number">07</span>Cookie</h2>
+        <p>ユーザー体験向上のためCookieを使用する場合があります。ブラウザ設定で無効化が可能です。</p>
+      </section>
+
+      <hr />
+
+      <!-- 08 第三者サイトへのリンク -->
+      <section class="terms-section">
+        <h2><span class="section-number">08</span>第三者サイトへのリンク</h2>
+        <p>第三者サイトのプライバシー慣行について当サービスは責任を負いません。</p>
+      </section>
+
+      <hr />
+
+      <!-- 09 未成年者のプライバシー -->
+      <section class="terms-section">
+        <h2><span class="section-number">09</span>未成年者のプライバシー</h2>
+        <p>18歳未満の方から意図的に情報を収集しません。</p>
+      </section>
+
+      <hr />
+
+      <!-- 10 ポリシー変更 -->
+      <section class="terms-section">
+        <h2><span class="section-number">10</span>ポリシー変更</h2>
+        <p>変更は本ページに反映され、「最終更新日」が更新されます。</p>
+      </section>
+
+      <hr />
+
+      <!-- 11 お問い合わせ -->
+      <section class="terms-section">
+        <h2><span class="section-number">11</span>お問い合わせ</h2>
+        <p>
+          <strong>Arthur K. Brown / TABI FIXER</strong><br />
+          <a href="mailto:arthur@tabifixer.com">arthur@tabifixer.com</a><br />
+          070-3772-4488<br />
+          〒535-0003 大阪府大阪市旭区中宮3丁目8-22 セレブ中宮 202
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">Tabi<span>Fixer</span></a>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms (EN)</a>
+        <a href="privacy.html">Privacy (EN)</a>
+        <a href="tokushoho.html">特定商取引法</a>
+        <a href="terms-ja.html">利用規約</a>
+        <a href="privacy-ja.html">プライバシーポリシー</a>
+        <a href="mailto:arthur@tabifixer.com">お問い合わせ</a>
+      </nav>
+      <p class="footer-copy">© 2026 Tabi Fixer. Based in Osaka, Japan.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
