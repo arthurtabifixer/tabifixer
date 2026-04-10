@@ -525,31 +525,34 @@
     .terms-note a:hover { color: var(--cream); }
 
     /* ── ADD-ONS ──────────────────────────────── */
-    .addons-section { padding: 7rem 0; background: var(--warm); }
+    .addons-section { padding: 4rem 0; background: var(--warm); }
     .addons-section .label { margin-bottom: 0.5rem; }
-    .addons-section h2 { margin-bottom: 1rem; }
-    .addons-section .lead { max-width: 500px; margin-bottom: 3.5rem; }
+    .addons-section h2 { margin-bottom: 0.6rem; }
+    .addons-section .lead { max-width: 500px; margin-bottom: 2rem; }
     .addons-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      gap: 1rem;
     }
     .addon-card {
-      background: var(--cream); padding: 2rem 1.8rem;
-      border-bottom: 3px solid transparent;
+      background: var(--cream); padding: 1.2rem 1.4rem;
+      border-bottom: 2px solid transparent;
       transition: border-color 0.2s;
+      display: flex; align-items: baseline; gap: 1rem;
+      flex-wrap: wrap;
     }
     .addon-card:hover { border-color: var(--red); }
     .addon-card-name {
-      font-size: 17px; font-weight: 600;
-      color: var(--ink); margin-bottom: 0.4rem; line-height: 1.35;
+      font-size: 15px; font-weight: 600;
+      color: var(--ink); line-height: 1.35; flex: 1;
     }
     .addon-card-price {
       font-family: 'Instrument Serif', serif;
-      font-size: 1.9rem; color: var(--red);
-      line-height: 1; margin-bottom: 0.75rem;
+      font-size: 1.4rem; color: var(--red);
+      line-height: 1; white-space: nowrap;
     }
     .addon-card-desc {
-      font-size: 15px; color: var(--muted); line-height: 1.75;
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+      width: 100%; margin-top: 0.3rem;
     }
 
     /* ── TESTIMONIALS ─────────────────────────── */
@@ -1056,12 +1059,12 @@
       <div class="addons-grid">
         <div class="addon-card">
           <div class="addon-card-name">Private Airport Transfer — Itami (ITM)</div>
-          <div class="addon-card-price">¥30,000</div>
+          <div class="addon-card-price">$180</div>
           <div class="addon-card-desc">Skip the train chaos. English-speaking driver, meet-and-greet at arrivals, direct to your hotel.</div>
         </div>
         <div class="addon-card">
           <div class="addon-card-name">Private Airport Transfer — Kansai (KIX)</div>
-          <div class="addon-card-price">¥35,000</div>
+          <div class="addon-card-price">$220</div>
           <div class="addon-card-desc">Private car from Kansai International to anywhere in Osaka or Kyoto. Comfortable, stress-free arrival.</div>
         </div>
         <div class="addon-card">
