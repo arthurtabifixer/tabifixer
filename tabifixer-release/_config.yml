@@ -1,6 +1,0 @@
-# GitHub Pages (Jekyll): keep internal files off the public site.
-exclude:
-  - docs
-  - tests
-  - backend
-  - README.md
